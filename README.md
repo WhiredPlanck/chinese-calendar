@@ -8,6 +8,14 @@
 >
 > It has been unmaintained since 2017. So I uploaded its codes to GitHub, wishing the developers who care of Chinese lunar calendar desktop client may feel free to fork it.
 
+## Screenshots
+
+![1.png](https://www.ubuntukylin.com/public/images/928_nl1.png)
+
+![2.png](https://www.ubuntukylin.com/public/images/928_nl2.png)
+
+![3.png](https://www.ubuntukylin.com/public/images/928_nl3.png)
+
 ## License
 
 GPL-3.0 License
