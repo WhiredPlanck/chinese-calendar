@@ -1,0 +1,189 @@
+/*
+ * This file is part of the chinese-calendar project
+ * Copyright (C) 2013 Mutse & Ubuntu Kylin Members
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 3 as
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * This project is developed by "Ubuntu Kylin Members" team,
+ * see <https://launchpad.net/~ubuntukylin~members>
+ * Author: Mutse <yyhoo2.young@gmail.com>
+ */
+
+ChineseCalendar{
+    background: url(/usr/share/chinese-calendar/skin/black/chinesecalendar.png);
+}
+
+ChineseCalendar QPushButton#TbnextMonth{
+    background-color:transparent;
+    image: url(/usr/share/chinese-calendar/skin/black/arrow-right.png);
+    color:rgb(200,200,150);
+}
+
+ChineseCalendar QPushButton#TbnextMonth:hover{
+    color:rgb(255,255,255);
+}
+
+ChineseCalendar QPushButton#TbnextYear{
+    background-color:transparent;
+    image: url(/usr/share/chinese-calendar/skin/black/arrow-right.png);
+    color:rgb(200,200,150);
+}
+
+ChineseCalendar QPushButton#TbnextYear:hover{
+    color:rgb(255,255,255);
+}
+
+ChineseCalendar QPushButton#TbpreviousMonth{
+    background-color:transparent;
+    image: url(/usr/share/chinese-calendar/skin/black/arrow-left.png);
+    color:rgb(200,200,150);
+}
+
+ChineseCalendar QPushButton#TbpreviousMonth:hover{
+    color:rgb(255,255,255);
+}
+
+ChineseCalendar QPushButton#TbpreviousYear{
+    background-color:transparent;
+    image: url(/usr/share/chinese-calendar/skin/black/arrow-left.png);
+    color:rgb(200,200,150);
+}
+
+ChineseCalendar QPushButton#TbpreviousYear:hover{
+    color:rgb(255,255,255);
+}
+
+ChineseCalendar QPushButton#backtotoday{
+    background-color:transparent;
+    color:rgb(200,200,150);
+}
+
+ChineseCalendar QPushButton#backtotoday:hover{
+    color:rgb(255,255,255);
+}
+
+ChineseCalendar QComboBox#YearSelect{
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    font:12pt;
+}
+
+ChineseCalendar QComboBox#monthCombo{
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    font:12pt;
+}
+
+ChineseCalendar QComboBox::down-arrow {
+    image: url(/usr/share/chinese-calendar/skin/black/arrow-down.png);
+    background-color: transparent;
+}
+
+ChineseCalendar QLabel#label{
+    font:12pt;
+}
+
+ChineseCalendar QLabel#label_2{
+    font:12pt;
+}
+
+ChineseCalendar QLabel#label_3, QLabel#label_9{
+    color: rgb(112, 121, 138);
+}
+
+ChineseCalendar QLabel#label_4,
+	QLabel#label_5,
+	QLabel#label_6,
+	QLabel#label_7,
+	QLabel#label_8{
+    color: rgb(248,128,35);
+}
+
+ChineseCalendar QLabel#label_10{
+    color: rgb(248,128,35);
+}
+
+ChineseCalendar QLabel#label_11{
+    color: rgb(238,124,35);
+}
+
+ChineseCalendar QLabel#label_12,
+    	QLabel#label_13, QLabel#label_14, 
+	QLabel#label_15, QLabel#label_17{
+    color: rgb(112, 121, 138);
+}
+
+ChineseCalendar QLabel#label_16{
+    color: black;
+}
+
+Cnote{
+    background: url(/usr/share/chinese-calendar/skin/black/note.png);
+}
+
+Cnote QPushButton#ok{
+    image: url(/usr/share/chinese-calendar/skin/black/ok.png);
+    background-color:transparent;
+}
+
+Cnote QPushButton#ok:hover{
+	image: url(/usr/share/chinese-calendar/skin/black/ok-hover.png);
+}
+
+Cnote QPushButton#cancel{
+    image: url(/usr/share/chinese-calendar/skin/black/no.png);
+    background-color:transparent;
+
+    border:0 solid;
+}
+
+Cnote QPushButton#cancel:hover{
+	image: url(/usr/share/chinese-calendar/skin/black/no-hover.png);
+}
+
+Cnote QLabel#datelabel{
+    background-color: transparent;
+    color: rgb(133,143,162);
+    border:0 solid;
+}
+
+Cnote QPushButton#clearplan{
+    background-color: transparent;
+    color: rgb(133,143,162);
+}
+
+Cnote QTextEdit#textedit{
+    background-color: transparent;
+    color: rgb(133,143,162);
+    border:0 solid;
+}
+
+DateItem:focus{
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(238, 93, 0, 255), stop:1 rgba(255, 121, 2, 200));
+}
+
+DateItem QWidget:hover{
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(238, 93, 0, 155), stop:1 rgba(255, 121, 2, 100));
+}
+
+DateItem QLabel#label{
+    color:rgb(112,121,138);
+}
+
+DateItem QLabel#labe:pressed{
+    color:rgb(255, 255, 0);
+}
+
+DateItem QLabel#label_2{
+    color:rgb(112, 121, 138);
+}

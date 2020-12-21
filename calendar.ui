@@ -1,0 +1,1413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Calendar</class>
+ <widget class="QWidget" name="Calendar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>491</width>
+    <height>326</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Calendar</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>39</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>文泉驿微米黑</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>周日</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>39</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>文泉驿微米黑</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>周一</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>39</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>文泉驿微米黑</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>周二</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>39</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>文泉驿微米黑</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>周三</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>39</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>文泉驿微米黑</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>周四</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>39</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>文泉驿微米黑</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>周五</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>39</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>文泉驿微米黑</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>周六</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>64</y>
+     <width>110</width>
+     <height>68</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>373</x>
+     <y>45</y>
+     <width>110</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>131</y>
+     <width>110</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_14">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>151</y>
+     <width>110</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>372</x>
+     <y>182</y>
+     <width>55</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>宜</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_16">
+   <property name="geometry">
+    <rect>
+     <x>423</x>
+     <y>182</y>
+     <width>55</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>忌</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_17">
+   <property name="geometry">
+    <rect>
+     <x>372</x>
+     <y>201</y>
+     <width>55</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_18">
+   <property name="geometry">
+    <rect>
+     <x>423</x>
+     <y>201</y>
+     <width>55</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_19">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>301</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="headerwidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>491</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <widget class="QPushButton" name="TbpreviousYear">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>9</y>
+      <width>15</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>文泉驿微米黑</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Previous Year</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="TbnextYear">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>9</y>
+      <width>15</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>文泉驿微米黑</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Next Year</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="monthCombo">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>8</y>
+      <width>50</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>文泉驿微米黑</family>
+     </font>
+    </property>
+    <item>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>11</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>12</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="backtotoday">
+    <property name="geometry">
+     <rect>
+      <x>245</x>
+      <y>8</y>
+      <width>45</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>文泉驿微米黑</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>今日</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>85</x>
+      <y>4</y>
+      <width>25</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>文泉驿微米黑</family>
+     </font>
+    </property>
+    <property name="text">
+     <string>年</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="TbnextMonth">
+    <property name="geometry">
+     <rect>
+      <x>225</x>
+      <y>9</y>
+      <width>15</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>文泉驿微米黑</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+      <underline>false</underline>
+      <stylestrategy>PreferDefault</stylestrategy>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Next Month</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>4</y>
+      <width>25</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>文泉驿微米黑</family>
+     </font>
+    </property>
+    <property name="text">
+     <string>月</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="TbpreviousMonth">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>9</y>
+      <width>15</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>文泉驿微米黑</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+      <underline>false</underline>
+      <stylestrategy>PreferDefault</stylestrategy>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Previous Month</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="YearSelect">
+    <property name="geometry">
+     <rect>
+      <x>25</x>
+      <y>8</y>
+      <width>60</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>1900</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1901</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1902</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1903</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1904</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1905</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1906</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1907</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1908</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1909</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1910</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1911</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1912</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1913</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1914</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1915</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1916</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1917</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1918</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1919</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1920</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1921</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1922</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1923</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1924</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1925</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1926</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1927</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1928</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1929</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1930</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1931</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1932</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1933</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1934</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1935</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1936</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1937</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1938</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1939</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1940</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1941</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1942</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1943</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1944</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1945</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1946</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1947</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1948</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1949</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1950</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1951</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1952</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1953</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1954</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1955</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1956</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1957</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1958</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1959</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1960</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1961</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1962</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1963</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1964</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1965</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1966</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1967</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1968</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1969</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1970</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1971</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1972</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1973</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1974</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1975</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1976</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1977</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1978</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1979</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1980</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1981</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1982</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1983</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1984</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1985</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1986</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1987</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1988</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1989</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1990</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1991</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1992</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1993</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1994</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1995</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1996</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1997</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1998</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1999</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2000</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2001</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2002</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2003</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2004</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2005</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2006</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2007</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2008</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2009</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2010</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2011</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2012</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2013</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2014</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2015</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2016</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2017</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2018</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2019</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2020</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2021</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2022</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2023</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2024</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2025</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2026</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2027</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2028</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2029</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2030</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2031</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2032</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2033</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2034</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2035</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2036</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2037</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2038</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2039</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2040</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2041</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2042</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2043</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2044</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2045</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2046</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2047</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2048</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2049</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2050</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>8</y>
+      <width>110</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="datewidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>71</y>
+     <width>349</width>
+     <height>254</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QWidget" name="yijibg" native="true">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>176</y>
+     <width>111</width>
+     <height>122</height>
+    </rect>
+   </property>
+  </widget>
+  <zorder>yijibg</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_4</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_6</zorder>
+  <zorder>label_7</zorder>
+  <zorder>label_8</zorder>
+  <zorder>label_9</zorder>
+  <zorder>label_10</zorder>
+  <zorder>label_12</zorder>
+  <zorder>label_13</zorder>
+  <zorder>label_14</zorder>
+  <zorder>label_11</zorder>
+  <zorder>label_16</zorder>
+  <zorder>label_17</zorder>
+  <zorder>label_18</zorder>
+  <zorder>label_19</zorder>
+  <zorder>headerwidget</zorder>
+  <zorder>datewidget</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

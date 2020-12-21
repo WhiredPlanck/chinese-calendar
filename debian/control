@@ -1,0 +1,23 @@
+Source: chinese-calendar
+Section: utils
+Priority: optional
+Maintainer: Ubuntu Kylin Members <ubuntukylin-members@lists.launchpad.net>
+Uploaders: Abel Liu <guiltyritter@gmail.com>,
+           Shine Huang <shenghuang@ubuntukylin.com>,
+           Anthony Wong <anthony.wong@ubuntu.com>
+Build-Depends: debhelper (>= 9),
+               libqt4-dev (>= 4.8.1)
+Standards-Version: 3.9.6
+Homepage: https://launchpad.net/chinese-calendar
+Vcs-Browser: https://bazaar.launchpad.net/~ubuntukylin-members/chinese-calendar/trunk/files
+Vcs-Bzr: lp:chinese-calendar
+
+Package: chinese-calendar
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}, libqt4-sql-sqlite
+Description: Chinese lunar calendar
+ This indicator is used to show a Chinese lunar calendar which is
+ tailored for Chinese users. The calendar can show festivals and the
+ 24 solar terms, year and month is also selectable.
+ .
+ This calendar is a default application in the Ubuntu Kylin flavour.

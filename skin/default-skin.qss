@@ -1,0 +1,120 @@
+/*
+ * This file is part of the chinese-calendar project
+ * Copyright (C) 2013 Mutse & Ubuntu Kylin Members
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 3 as
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * This project is developed by "Ubuntu Kylin Members" team,
+ * see <https://launchpad.net/~ubuntukylin~members>
+ * Author: Mutse <yyhoo2.young@gmail.com>
+ */
+
+ChineseCalendar{
+    background: url(/usr/share/chinese-calendar/skin/default/chinesecalendarBGyellow.png);
+}
+
+ChineseCalendar QPushButton#TbnextMonth{
+    background-color:transparent;
+    color:rgb(200,200,150);
+}
+
+ChineseCalendar QPushButton#TbnextMonth:hover{
+    color:rgb(255,255,255);
+}
+
+ChineseCalendar QPushButton#TbnextYear{
+    background-color:transparent;
+    color:rgb(200,200,150);
+}
+
+ChineseCalendar QPushButton#TbnextYear:hover{
+    color:rgb(255,255,255);
+}
+
+ChineseCalendar QPushButton#TbpreviousMonth{
+    background-color:transparent;
+    color:rgb(200,200,150);
+}
+
+ChineseCalendar QPushButton#TbpreviousMonth:hover{
+    color:rgb(255,255,255);
+}
+
+ChineseCalendar QPushButton#TbpreviousYear{
+    background-color:transparent;
+    color:rgb(200,200,150);
+}
+
+ChineseCalendar QPushButton#TbpreviousYear:hover{
+    color:rgb(255,255,255);
+}
+
+ChineseCalendar QPushButton#backtotoday{
+    background-color:transparent;
+    color:rgb(200,200,150);
+}
+
+ChineseCalendar QPushButton#backtotoday:hover{
+    color:rgb(255,255,255);
+}
+
+ChineseCalendar QComboBox#YearSelect{
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    font:12pt;
+}
+
+ChineseCalendar QComboBox#monthCombo{
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    font:12pt;
+}
+
+ChineseCalendar QLabel#label{
+    font:12pt;
+}
+
+ChineseCalendar QLabel#label_2{
+    font:12pt;
+}
+
+Cnote{
+    background: url(/usr/share/chinese-calendar/skin/default/note.png);
+}
+
+Cnote QPushButton#ok{
+    image: url(/usr/share/chinese-calendar/skin/default/ok.png);
+    background-color:transparent;
+}
+
+Cnote QPushButton#cancel{
+    image: url(/usr/share/chinese-calendar/skin/default/no.png);
+    background-color:transparent;
+    border:0 solid;
+}
+
+Cnote QLabel#datelabel{
+    background-color:transparent;
+    border:0 solid;
+}
+
+Cnote QPushButton#clearplan{
+    background-color:transparent;
+}
+
+Cnote QTextEdit#textedit{
+    background-color:transparent;
+    border:0 solid;
+}
+
+

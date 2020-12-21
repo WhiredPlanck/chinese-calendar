@@ -1,0 +1,8 @@
+#! /bin/bash
+startFilePath="$HOME/.local/share/chinese-calendar/chinese-calendar.desktop"
+if [ ! -f "$startFilePath" ]; then
+	echo "yes"
+	/usr/bin/chinese-calendar &
+else
+	echo "no"
+fi

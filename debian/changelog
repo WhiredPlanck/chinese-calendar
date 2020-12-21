@@ -1,0 +1,135 @@
+chinese-calendar (1.0.4-0ubuntu1) xenial; urgency=low
+
+  * New upstream release:
+    - merge from jinlj, add support for qt5
+
+ -- Shine <shenghuang@ubuntukylin.com>  Wed, 29 Nov 2017 09:10:08 +0800
+
+chinese-calendar (1.0.3-0ubuntu1) xenial; urgency=low
+
+  * New upstream release:
+    - Fix: chinese YI and JI msg format wrong on 1604
+
+ -- Shine <shenghuang@ubuntukylin.com>  Mon, 21 Mar 2016 09:20:37 +0800
+
+chinese-calendar (1.0.2-0ubuntu1) vivid; urgency=low
+
+  * New upstream release:
+    - Fix: LP #1419608, nowtime format wrong on 1504 english version
+
+ -- Shine <shenghuang@ubuntukylin.com>  Tue, 17 Mar 2015 23:50:24 -0400
+
+chinese-calendar (1.0.1-0ubuntu1) vivid; urgency=low
+
+  * New upstream release:
+    - Fix: LP #1306863, Not translated content in "Launch application preference"
+
+ -- Shine <shenghuang@ubuntukylin.com>  Mon, 15 Dec 2014 09:50:22 +0800
+
+chinese-calendar (1.0.0-0ubuntu2) vivid; urgency=low
+
+  * debian/control:
+    - add dependency on libqt4-sql-sqlite (LP: #1343191)
+    - remove unnecessary packages from Build-Depends
+    - add Bzr-Broswer and Vcs-Bzr
+  * debian/changelog:
+    - fix syntax error
+
+ -- Anthony Wong <anthony.wong@ubuntu.com>  Wed, 03 Dec 2014 16:09:49 +0800
+
+chinese-calendar (1.0.0-0ubuntu1) utopic; urgency=medium
+
+  [ Shine Huang ]
+  * New upstream release:
+    - pick category from 'Graphic' to 'Utility'
+    - adapt UI according to UKSC 1.0
+
+  [ Aron Xu ]
+  * debian/control:
+    - std-ver: 3.9.5 -> 3.9.6, no change
+    - Priority: extra -> optional
+  * debian/copyright:
+    - update for QtSingleApplication
+
+ -- Aron Xu <happyaron@ubuntu.com>  Thu, 09 Oct 2014 16:53:15 +0800
+
+chinese-calendar (0.8.2-0ubuntu1) trusty; urgency=medium
+
+  * Replace UbuntuKylin with "Ubuntu Kylin"
+
+ -- Anthony Wong <anthony.wong@ubuntu.com>  Tue, 18 Mar 2014 21:28:58 +0800
+
+chinese-calendar (0.8.1-0ubuntu1) saucy; urgency=low
+
+  * New upstream release:
+    - Fix: LP #1227147, LP #1233937
+
+ -- Shine Huang <hostc@163.com>  Wed, 12 Feb 2014 10:36:40 +0800
+
+chinese-calendar (0.8.0-0ubuntu1) saucy; urgency=low
+
+  * New upstream release:
+    - Add skin changing function code
+    - Add default and blue skin qss files
+    - Add about software info
+    - Add shotcut to hide chinese-calendar when it shows
+    - Fix: LP #1205242, LP #1206026
+  * Update compat to 9, std-ver to 3.9.4.
+  * Slightly update description in d/control.
+  * Update d/copyright to reflect debian directory copyright.
+
+ -- Aron Xu <happyaron@ubuntu.com>  Wed, 18 Sep 2013 02:45:08 +0800
+
+chinese-calendar (0.7.8-0ubuntu1) saucy; urgency=low
+
+  * New upstream release.
+    (LP: #1190936, #1192501, #1160698, #1164859, #1161756, #1155491, #1160800)
+  * Drop all patches, which were merged back to upstreap.
+
+ -- Zhengpeng Hou <zhengpeng-hou@ubuntu.com>  Wed, 26 Jun 2013 08:55:14 +0800
+
+chinese-calendar (0.7.6-0ubuntu4) raring; urgency=low
+
+  * add 03-save-data-per-user.diff (LP: #1160149)
+  * remove debian/postinst, since db will be saved under
+    user's home.
+
+ -- Zhengpeng Hou <zhengpeng-hou@ubuntu.com>  Tue, 26 Mar 2013 22:49:47 +0800
+
+chinese-calendar (0.7.6-0ubuntu3) raring; urgency=low
+
+  * add 02-fix-write-permission.diff. (LP: #1159732) 
+
+ -- Zhengpeng Hou <zhengpeng-hou@ubuntu.com>  Mon, 25 Mar 2013 20:12:01 +0800
+
+chinese-calendar (0.7.6-0ubuntu2) raring; urgency=low
+
+  * Add 01-fix-crash.diff to fix the crash on startup.
+
+ -- Zhengpeng Hou <zhengpeng-hou@ubuntu.com>  Thu, 14 Mar 2013 21:41:07 +0800
+
+chinese-calendar (0.7.6-0ubuntu1) raring; urgency=high
+
+  * Fix bug #1154063, bug #1154075, bug #1154079, bug #1154050.
+  * Modify note function.
+
+ -- abelsaber (Yes,it's true) <guiltyritter@gmail.com>  Wed, 13 Mar 2013 10:12:21 +0800
+
+chinese-calendar (0.7.5) raring; urgency=high
+
+  * Fix bug #1124849, bug #1124747, bug #1124831, bug #1131516, bug #1124825, bug #1129925.
+  * Add note function.
+
+ -- abelsaber (Yes,it's true) <guiltyritter@gmail.com>  Tue, 12 Mar 2013 14:25:51 +0800
+
+chinese-calendar (0.7.4) raring; urgency=low
+
+  * Optimize the display of dateitem, add systemtray.
+
+ -- abelsaber (Yes,it's true) <guiltyritter@gmail.com>  Tue, 29 Jan 2013 14:33:08 +0800
+
+chinese-calendar (0.6.2-1) raring; urgency=low
+
+  * Initial release.
+
+ -- abelsaber (Yes,it's true) <guiltyritter@gmail.com>  Tue, 22 Jan 2013 14:10:26 +0800

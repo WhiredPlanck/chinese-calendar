@@ -1,0 +1,239 @@
+/*
+ * This file is part of the chinese-calendar project
+ * Copyright (C) 2013 Mutse & Ubuntu Kylin Members
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 3 as
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * This project is developed by "Ubuntu Kylin Members" team,
+ * see <https://launchpad.net/~ubuntukylin~members>
+ * Author: Mutse <yyhoo2.young@gmail.com>
+ */
+
+ChineseCalendar{
+    background-color: #EEEDF0;
+}
+
+ChineseCalendar QWidget#headerwidget{
+    background-color: #0F84BC;
+}
+
+ChineseCalendar QWidget#yijibg{
+    background-image:url('/usr/share/chinese-calendar/skin/blue/yijibg.png');
+}
+
+ChineseCalendar QLabel#label_3{
+    color: #D71918;
+}
+
+ChineseCalendar QLabel#label_4{
+    color: #999999;
+}
+
+ChineseCalendar QLabel#label_5{
+    color: #999999;
+}
+
+ChineseCalendar QLabel#label_6{
+    color: #999999;
+}
+
+ChineseCalendar QLabel#label_7{
+    color: #999999;
+}
+
+ChineseCalendar QLabel#label_8{
+    color: #999999;
+}
+
+ChineseCalendar QLabel#label_9{
+    color: #D71918;
+}
+
+ChineseCalendar QLabel#label_10{
+    color: #666666;
+}
+
+ChineseCalendar QLabel#label_11{
+    color: #D71918;
+}
+
+ChineseCalendar QLabel#label_12{
+    font-size:14px;
+    color: #666666;
+}
+
+ChineseCalendar QLabel#label_13{
+    color: #D71918;
+}
+
+ChineseCalendar QLabel#label_14{
+    color: #666666;
+}
+
+ChineseCalendar QLabel#label_16{
+    color: #D71918;
+}
+
+ChineseCalendar QLabel#label_17{
+    color: #D71918;
+}
+
+ChineseCalendar QLabel#label_18{
+    color: #666666;
+}
+
+ChineseCalendar QLabel#label_19{
+    color: #D71918;
+    text-align:center;
+}
+
+ChineseCalendar QPushButton#TbnextMonth{
+    background-image:url('/usr/share/chinese-calendar/skin/blue/right-1.png');
+    border:0px;
+}
+ChineseCalendar QPushButton#TbnextMonth:hover{
+    background-image:url('/usr/share/chinese-calendar/skin/blue/right-2.png');
+}
+ChineseCalendar QPushButton#TbnextMonth:pressed{
+    background-image:url('/usr/share/chinese-calendar/skin/blue/right-2.png');
+}
+
+ChineseCalendar QPushButton#TbnextYear{
+    background-image:url('/usr/share/chinese-calendar/skin/blue/right-1.png');
+    border:0px;
+}
+ChineseCalendar QPushButton#TbnextYear:hover{
+    background-image:url('/usr/share/chinese-calendar/skin/blue/right-2.png');
+}
+ChineseCalendar QPushButton#TbnextYear:pressed{
+    background-image:url('/usr/share/chinese-calendar/skin/blue/right-2.png');
+}
+
+ChineseCalendar QPushButton#TbpreviousMonth{
+    background-image:url('/usr/share/chinese-calendar/skin/blue/left-1.png');
+    border:0px;
+}
+ChineseCalendar QPushButton#TbpreviousMonth:hover{
+    background-image:url('/usr/share/chinese-calendar/skin/blue/left-2.png');
+}
+ChineseCalendar QPushButton#TbpreviousMonth:pressed{
+    background-image:url('/usr/share/chinese-calendar/skin/blue/left-2.png');
+}
+
+ChineseCalendar QPushButton#TbpreviousYear{
+    background-image:url('/usr/share/chinese-calendar/skin/blue/left-1.png');
+    border:0px;
+}
+ChineseCalendar QPushButton#TbpreviousYear:hover{
+    background-image:url('/usr/share/chinese-calendar/skin/blue/left-2.png');
+}
+ChineseCalendar QPushButton#TbpreviousYear:pressed{
+    background-image:url('/usr/share/chinese-calendar/skin/blue/left-2.png');
+}
+
+ChineseCalendar QPushButton#backtotoday{
+    border:1px solid #FFFFFF;
+    color:#FFFFFF;
+}
+ChineseCalendar QPushButton#backtotoday:hover{
+    border:1px solid #47CCF3;
+    color:#47CCF3;
+}
+
+ChineseCalendar QLabel#label_15{
+    background-color:#09587D;
+    font-size:15px;
+    color:#FFFFFF;
+}
+
+ChineseCalendar QComboBox#YearSelect{
+    border: 0px;
+    background: #09587D;
+    font-size:15px;
+    padding-left:10px;
+}
+ChineseCalendar QComboBox#YearSelect QAbstractItemView{
+    padding-left:-10px;
+}
+ChineseCalendar QComboBox#YearSelect:editable{
+    color:white;
+}
+ChineseCalendar QComboBox#YearSelect:drop-down {
+    border:0px;
+    background:transparent;
+    image:none;
+}
+
+ChineseCalendar QComboBox#monthCombo{
+    border: 0px;
+    background: #09587D;
+    font-size:15px;
+    padding-left:16px;
+}
+ChineseCalendar QComboBox#monthCombo QAbstractItemView{
+    padding-left:-10px;
+}
+ChineseCalendar QComboBox#monthCombo:editable{
+    color:white;
+}
+ChineseCalendar QComboBox#monthCombo:drop-down {
+    border:0px;
+    background:transparent;
+    image:none;
+}
+
+ChineseCalendar QLabel#label{
+    font:15px;
+}
+
+ChineseCalendar QLabel#label_2{
+    font:15px;
+}
+
+DateItem QWidget#noteCorner{
+    background-image:url('/usr/share/chinese-calendar/skin/blue/corner3.png');
+        background-repeat:no-repeat;
+        background-position:top right;
+}
+
+Cnote{
+    background-color: #EEEDF0;
+}
+
+Cnote QPushButton#ok{
+    border:1px solid #09587D;
+    color:#09587D;
+}
+
+Cnote QPushButton#cancel{
+    border:1px solid #09587D;
+    color:#09587D;
+}
+
+Cnote QPushButton#clearplan{
+    border:1px solid #09587D;
+    color:#09587D;
+}
+
+Cnote QLabel#datelabel{
+    background-color:transparent;
+    font-size:15px;
+    color:#FFFFFF;
+}
+
+Cnote QTextEdit#textedit{
+    background-color:#FFFFFF;
+    border:1 solid #CCCCCC;
+}
+
+
