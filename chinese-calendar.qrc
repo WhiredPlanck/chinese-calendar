@@ -1,12 +1,12 @@
 <RCC>
     <qresource prefix="/">
-        <file>img/chinesecalendar.svg</file>
-        <file>img/chinesecalendar-64.png</file>
-        <file>img/icon.png</file>
-        <file>img/icon-64.png</file>
-        <file>translate/i18_zh_CN.qm</file>
-        <file>translate/i18_zh_CN.ts</file>
+        <file>data/img/chinesecalendar.svg</file>
+        <file>data/img/chinesecalendar-64.png</file>
+        <file>data/img/icon.png</file>
+        <file>data/img/icon-64.png</file>
+        <file>data/translate/i18_zh_CN.qm</file>
+        <file>data/translate/i18_zh_CN.ts</file>
         <file>qss/aboutus.qss</file>
-        <file>translate/qt_zh_CN.qm</file>
+        <file>data/translate/qt_zh_CN.qm</file>
     </qresource>
 </RCC>
