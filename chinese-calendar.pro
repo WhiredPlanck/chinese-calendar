@@ -2,51 +2,52 @@ TEMPLATE = app
 TARGET +=
 DEPENDPATH += $$PWD/
 INCLUDEPATH += $$PWD/
+OBJECTS_DIR += build/
 
-inst.files += KylinLunar.db
+inst.files += src/KylinLunar.db
 inst.path = /usr/share/chinese-calendar/db
-inst1.files += img/chinesecalendar-64.png
+inst1.files += data/img/chinesecalendar-64.png
 inst1.path = /usr/share/pixmaps
-inst2.files += chinese-calendar.desktop
+inst2.files += data/chinese-calendar.desktop
 inst2.path = /usr/share/applications
-inst3.files += chinese-calendar-autostart.desktop
+inst3.files += data/chinese-calendar-autostart.desktop
 inst3.path = /etc/xdg/autostart
-inst4.files += chinese-calendar-autostart
+inst4.files += data/chinese-calendar-autostart
 inst4.path = /usr/bin
-default_skin.files += skin/default/chinesecalendarBGyellow.png \
-    skin/default/no.png \
-    skin/default/note.png \
-    skin/default/ok.png
+default_skin.files += data/skin/default/chinesecalendarBGyellow.png \
+    data/skin/default/no.png \
+    data/skin/default/note.png \
+    data/skin/default/ok.png
 default_skin.path = /usr/share/chinese-calendar/skin/default
-blue_skin.files += skin/blue/yijibg.png \
-    skin/blue/no.png \
-    skin/blue/note.png \
-    skin/blue/ok.png \
-    skin/blue/left-1.png \
-    skin/blue/left-2.png \
-    skin/blue/right-1.png \
-    skin/blue/right-2.png \
-        skin/blue/normaldate.png \
-        skin/blue/corner1.png \
-        skin/blue/corner2.png \
-        skin/blue/corner3.png \
-        skin/blue/corner4.png
+blue_skin.files += data/skin/blue/yijibg.png \
+    data/skin/blue/no.png \
+    data/skin/blue/note.png \
+    data/skin/blue/ok.png \
+    data/skin/blue/left-1.png \
+    data/skin/blue/left-2.png \
+    data/skin/blue/right-1.png \
+    data/skin/blue/right-2.png \
+        data/skin/blue/normaldate.png \
+        data/skin/blue/corner1.png \
+        data/skin/blue/corner2.png \
+        data/skin/blue/corner3.png \
+        data/skin/blue/corner4.png
 blue_skin.path = /usr/share/chinese-calendar/skin/blue
-black_skin.files += skin/black/chinesecalendar.png \
-    skin/black/no.png \
-    skin/black/no-hover.png \
-    skin/black/ok.png \
-    skin/black/ok-hover.png \
-    skin/black/note.png \
-    skin/black/arrow-left.png \
-    skin/black/arrow-right.png \
-    skin/black/arrow-down.png
+black_skin.files += data/skin/black/chinesecalendar.png \
+    data/skin/black/no.png \
+    data/skin/black/no-hover.png \
+    data/skin/black/ok.png \
+    data/skin/black/ok-hover.png \
+    data/skin/black/note.png \
+    data/skin/black/arrow-left.png \
+    data/skin/black/arrow-right.png \
+    data/skin/black/arrow-down.png
 black_skin.path = /usr/share/chinese-calendar/skin/black
-qss.files += skin/default-skin.qss \
-    skin/blue-skin.qss \
-    skin/black.qss
+qss.files += data/skin/default-skin.qss \
+    data/skin/blue-skin.qss \
+    data/skin/black.qss
 qss.path = /usr/share/chinese-calendar/skin
-readme.files += skin/README.md
+readme.files += data/skin/README.md
 readme.path = /usr/share/chinese-calendar/skin
 
 target.source += $$TARGET
@@ -74,22 +75,22 @@ greaterThan(4, QT_MAJOR_VERSION): QT += widgets
 
 
 HEADERS += \
-    dateitem.h \
-    datemaskwidget.h \
-    chinesecalendar.h \
-    ccbo.h \
-    cnote.h \
-    aboutdialog.h
-FORMS += calendar.ui \
-    dateitem.ui \
-    aboutdialog.ui
-SOURCES += main.cpp \
-    dateitem.cpp \
-    datemaskwidget.cpp \
-    chinesecalendar.cpp \
-    ccbo.cpp \
-    cnote.cpp \
-    aboutdialog.cpp
+    src/dateitem.h \
+    src/datemaskwidget.h \
+    src/chinesecalendar.h \
+    src/ccbo.h \
+    src/cnote.h \
+    src/aboutdialog.h
+FORMS += src/calendar.ui \
+    src/dateitem.ui \
+    src/aboutdialog.ui
+SOURCES += src/main.cpp \
+    src/dateitem.cpp \
+    src/datemaskwidget.cpp \
+    src/chinesecalendar.cpp \
+    src/ccbo.cpp \
+    src/cnote.cpp \
+    src/aboutdialog.cpp
 RESOURCES += \
     chinese-calendar.qrc
-TRANSLATIONS += translate/i18_zh_CN.ts
+TRANSLATIONS += data/translate/i18_zh_CN.ts

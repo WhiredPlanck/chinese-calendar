@@ -27,8 +27,8 @@ ChineseCalendar::ChineseCalendar(QWidget *parent)
     : QWidget(parent)
 {
     setupUi(this); m_strFileList.clear();
-    icon = QIcon(":/img/icon.png");
-    icon64 = QIcon(":/img/chinesecalendar-64.png");
+    icon = QIcon(":/data/img/icon.png");
+    icon64 = QIcon(":/data/img/chinesecalendar-64.png");
     mycalendat=new CCBO;
     mycalendat->InitConnection(QDir::currentPath ());
     selectedDate = QDate::currentDate();

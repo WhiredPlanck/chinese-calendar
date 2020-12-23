@@ -23,6 +23,7 @@
  * Jinlj <jincsu@126.com>
  */
 
+#include <iostream>
 #include <QtGui>
 #include <QCoreApplication>
 #include <QTranslator>
@@ -33,7 +34,8 @@
 
 int main(int argc, char *argv[])
 {
-    printf("First, you should copy database to `/usr/share/chinese-calendar/db/KylinLunar.db`\n\n");
+    //printf("First, you should copy database to `/usr/share/chinese-calendar/db/KylinLunar.db`\n\n");
+    std::cout << "First, you should copy database to `/usr/share/chinese-calendar/db/KylinLunar.db`" << std::endl << std::endl;
     //单程序运行处理
     QtSingleApplication app(argc, argv);
     if (app.isRunning())
@@ -48,8 +50,8 @@ int main(int argc, char *argv[])
     QTranslator translator;
     QTranslator translatorMenu;
 
-    translator.load(":/translate/i18_zh_CN.qm");
-    translatorMenu.load(":/translate/qt_zh_CN.qm");
+    translator.load(":/data/translate/i18_zh_CN.qm");
+    translatorMenu.load(":/data/translate/qt_zh_CN.qm");
     app.installTranslator(&translator);
     app.installTranslator(&translatorMenu);
 
