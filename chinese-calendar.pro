@@ -64,7 +64,7 @@ INSTALLS += inst \
     readme \
     target
 
-include(qtsingleapplication/src/qtsingleapplication.pri)
+include(src/qtsingleapplication/src/qtsingleapplication.pri)
 
 QT += core gui\
     sql \

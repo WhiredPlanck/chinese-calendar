@@ -17,15 +17,16 @@ AboutDialog::AboutDialog(QWidget *parent) :
     ui->setupUi(this);
     connect(ui->closeBtn, SIGNAL(clicked()), this, SLOT(hide()));
     connect(ui->lbHomepage, SIGNAL(linkActivated(QString)), this, SLOT(openUrl(QString)));
-
+/*
 #ifdef DEBUG
-    QFile file(QCoreApplication::applicationDirPath() + "/qss/aboutus.qss");
+    QFile file(QCoreApplication::applicationDirPath() + "src/qss/aboutus.qss");
 #else
-    QFile file(":/qss/aboutus.qss");
+    QFile file(":src/qss/aboutus.qss");
 #endif
     file.open(QFile::ReadOnly);
     QString stylesheet = QObject::tr(file.readAll());
     this->setStyleSheet(stylesheet);
+*/
 }
 
 AboutDialog::~AboutDialog()
