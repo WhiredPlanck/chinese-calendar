@@ -1,4 +1,4 @@
-# Chinese-calendar-uk
+# chinese-calendar
 
 **It is the default calendar for Ubuntu Kylin.**
 
@@ -17,11 +17,12 @@ As for now, once the window show up, it will be quickly crashed. (Arch Linux KDE
 ## How to build
 
 Firstly, you need `qt5-base` and `qt5-svg` to be installed.
+Then ...
 
 ```bash
-git clone https://github.com/whriedplanck/Chinese-calendar-uk
-cd Chinese-calendar-uk
-copy src/datemaskwidget.h ./datamaskwidget.h # I can't figure out how to build without this step.
+git clone https://github.com/whriedplanck/chinese-calendar
+cd chinese-calendar
+ln -sf src/datemaskwidget.h ./datamaskwidget.h # I can't figure out how to build without this step.
 qmake PREFIX=/usr
 make
 make install
