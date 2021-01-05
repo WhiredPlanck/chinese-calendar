@@ -4,6 +4,14 @@ DEPENDPATH += $$PWD/
 INCLUDEPATH += $$PWD/
 OBJECTS_DIR += build/
 
+
+#CONFIG += debug_and_release
+#CONFIG(debug, debug|release) {
+#    TARGET = chinese-calendar
+#} else {
+#    TARGET = chinese-calendar
+#}
+
 inst.files += src/KylinLunar.db
 inst.path = /usr/share/chinese-calendar/db
 inst1.files += data/img/chinesecalendar-64.png

@@ -28,7 +28,8 @@
 #include <QCoreApplication>
 #include <QTranslator>
 #include <QTextCodec>
-#include <QDesktopWidget>
+//#include <QDesktopWidget>
+#include <QScreen>
 #include <QtSingleApplication>
 #include "chinesecalendar.h"
 
@@ -56,14 +57,14 @@ int main(int argc, char *argv[])
     app.installTranslator(&translatorMenu);
 
 // load default skin
-//#ifdef DEBUG
-//    QFile file(QCoreApplication::applicationDirPath() + "/skin/blue-skin.qss");
-//#else
-//    QFile file("/usr/share/chinese-calendar/skin/blue-skin.qss");
-//#endif
-//    file.open(QFile::ReadOnly);
-//    QString stylesheet = QObject::tr(file.readAll());
-//    app.setStyleSheet(stylesheet);
+#ifdef DEBUG
+    QFile file(QCoreApplication::applicationDirPath() + "/skin/blue-skin.qss");
+#else
+    QFile file("/usr/share/chinese-calendar/skin/blue-skin.qss");
+#endif
+    file.open(QFile::ReadOnly);
+    QString stylesheet = QObject::tr(file.readAll());
+    app.setStyleSheet(stylesheet);
 
     app.setQuitOnLastWindowClosed(false);
 
@@ -72,9 +73,13 @@ int main(int argc, char *argv[])
     window->setWindowFlags(Qt::FramelessWindowHint);
     window->resetDateItemColor();
 
-    QDesktopWidget desktop;
-    int width = desktop.screenGeometry().width();
-    int height = desktop.screenGeometry().height();
+    //QDesktopWidget desktop;
+    QScreen *screen = QGuiApplication::primaryScreen();
+    QRect screenRect = screen->availableVirtualGeometry();
+    int width = screenRect.width();
+    //int height = desktop.screens().size();
+    //int width = desktop.screenGeometry().width();
+    //int height = desktop.screenGeometry().height();
 
     window->move(width - window->width() - 5, 30);
     window->hide();

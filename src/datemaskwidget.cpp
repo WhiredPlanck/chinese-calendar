@@ -31,11 +31,9 @@ DateMaskWidget::DateMaskWidget(QWidget *parent) :
 
 void DateMaskWidget::mousePressEvent(QMouseEvent *ev)
 {
-    if( ev->button() == Qt::LeftButton)
+    if ( ev->button() == Qt::LeftButton)
         emit clicked();
-    if( ev->button() == Qt::LeftButton && ev->type() == QEvent::MouseButtonDblClick)
-    {
+    if ( ev->button() == Qt::LeftButton && ev->type() == QEvent::MouseButtonDblClick)
         emit clickday();
-    }
     ev->ignore();
 }

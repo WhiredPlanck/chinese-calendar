@@ -32,8 +32,8 @@ DateItem::DateItem(QWidget *parent) :
     font.setPointSize(15);
     QFont font1;
     font1.setPointSize(10);
-    ui->label->setFont(font);
-    ui->label_2->setFont(font1);
+    ui->solarDay->setFont(font);
+    ui->lunarDay->setFont(font1);
     ui->noteCorner->hide();
 
     connect(ui->datemaskwidget, SIGNAL(clicked()), this, SLOT(click()));
@@ -44,7 +44,7 @@ DateItem::DateItem(QWidget *parent) :
     this->isFocus = false;
 //    this->oriItemStyle = this->styleSheet();
 //    this->oriDayStyle = ui->label->styleSheet();
-//    this->oriCDayStyle = ui->label_2->styleSheet();
+//    this->oriCDayStyle = ui->lunarDay->styleSheet();
     this->oriItemStyle = "QWidget{background-image: url('/usr/share/chinese-calendar/skin/blue/normaldate.png');}";
     this->oriDayStyle = "QLabel{font-size:16px;color: #666666;}";
     this->oriCDayStyle = "QLabel{font-size:13px;color: #666666;}";
@@ -62,158 +62,135 @@ DateItem::DateItem(QWidget *parent) :
     this->hoverCDayStyle = "QLabel{color: #666666;}";
 }
 
-DateItem::~DateItem()
-{
+DateItem::~DateItem() {
     delete ui;
 }
 
-bool DateItem::eventFilter(QObject *o, QEvent *ev)
-{
-    if(o == ui->datemaskwidget){
-        if(ev->type() == QEvent::Enter){
+bool DateItem::eventFilter(QObject *o, QEvent *ev) {
+    if (o == ui->datemaskwidget) {
+        if (ev->type() == QEvent::Enter) {
             this->enter();
-        }else if(ev->type() == QEvent::Leave){
+        } else if(ev->type() == QEvent::Leave) {
             this->leave();
-        }else{
+        } else {
             return QObject::eventFilter(o,ev);
         }
     }
 }
 
-void DateItem::resizeItem(int x, int y)
-{
+void DateItem::resizeItem(int x, int y) {
     this->resize(x,y);
     ui->datemaskwidget->resize(x,y);
-    if ( y == 50 )
-    {
-        ui->label->resize(49,27);
-        ui->label->move(0,2);
-        ui->label_2->resize(49,20);
-        ui->label_2->move(0,27);
+    if ( y == 50 ){
+        ui->solarDay->resize(49,27);
+        ui->solarDay->move(0,2);
+        ui->lunarDay->resize(49,20);
+        ui->lunarDay->move(0,27);
     }
-    if( y == 41 )
-    {
-        ui->label->resize(49,22);
-        ui->label->move(0,0);
-        ui->label_2->resize(49,17);
-        ui->label_2->move(0,22);
+    if( y == 41 ) {
+        ui->solarDay->resize(49,22);
+        ui->solarDay->move(0,0);
+        ui->lunarDay->resize(49,17);
+        ui->lunarDay->move(0,22);
     }
 }
 
-void DateItem::enter()
-{
-    if (!ui->label->text().isNull())
-    {
-        if(this->isFocus){
+void DateItem::enter() {
+    if (!ui->solarDay->text().isNull()) {
+        if (this->isFocus) {
             this->ui->bg->setStyleSheet(this->clickiItemStyle);
-            ui->label->setStyleSheet(this->clickDayStyle);
-            ui->label_2->setStyleSheet(this->clickCDayStyle);
-        }else{
+            ui->solarDay->setStyleSheet(this->clickDayStyle);
+            ui->lunarDay->setStyleSheet(this->clickCDayStyle);
+        } else {
             this->ui->bg->setStyleSheet(this->hoverItemStyle);
-            ui->label->setStyleSheet(this->hoverDayStyle);
-            ui->label_2->setStyleSheet(this->hoverCDayStyle);
+            ui->solarDay->setStyleSheet(this->hoverDayStyle);
+            ui->lunarDay->setStyleSheet(this->hoverCDayStyle);
         }
     }
 }
 
-void DateItem::leave()
-{
-    if(this->isFocus){
+void DateItem::leave() {
+    if (this->isFocus) {
         this->ui->bg->setStyleSheet(this->clickiItemStyle);
-        ui->label->setStyleSheet(this->clickDayStyle);
-        ui->label_2->setStyleSheet(this->clickCDayStyle);
-    }else{
+        ui->solarDay->setStyleSheet(this->clickDayStyle);
+        ui->lunarDay->setStyleSheet(this->clickCDayStyle);
+    } else {
         this->ui->bg->setStyleSheet(this->oriItemStyle);
-        ui->label->setStyleSheet(this->oriDayStyle);
-        ui->label_2->setStyleSheet(this->oriCDayStyle);
+        ui->solarDay->setStyleSheet(this->oriDayStyle);
+        ui->lunarDay->setStyleSheet(this->oriCDayStyle);
     }
 //    emit resetColor();
 }
 
 
-void DateItem::click()
-{
-    if (!ui->label->text().isNull())
-    {
-        emit clicked(ui->label->text());
+void DateItem::click() {
+    if (!ui->solarDay->text().isNull()) {
+        emit clicked(ui->solarDay->text());
         this->ui->bg->setStyleSheet(this->clickiItemStyle);
-        ui->label->setStyleSheet(this->clickDayStyle);
-        ui->label_2->setStyleSheet(this->clickCDayStyle);
+        ui->solarDay->setStyleSheet(this->clickDayStyle);
+        ui->lunarDay->setStyleSheet(this->clickCDayStyle);
         this->isFocus = true;
 //        emit resetColor();
     }
 }
 
-void DateItem::clickday()
-{
-    if(!ui->label->text().isNull())
-    {
-        emit day(ui->label->text());
+void DateItem::clickday() {
+    if (!ui->solarDay->text().isNull()) {
+        emit day(ui->solarDay->text());
 //        note->show();
     }
 }
 
-void DateItem::setday(int day)
-{
-    ui->label->setText(QString::number(day));
+void DateItem::setday(int day) {
+    ui->solarDay->setText(QString::number(day));
 }
 
-void DateItem::setcday(QString cday)
-{
-    ui->label_2->setText(cday);
+void DateItem::setcday(QString cday) {
+    ui->lunarDay->setText(cday);
 }
 
-void DateItem::setNoteCorner(bool flag)
-{
-    if(flag)
-    {
+void DateItem::setNoteCorner(bool flag) {
+    if (flag) {
         ui->noteCorner->show();
-    }else
-    {
+    } else {
         ui->noteCorner->hide();
     }
 }
 
-QString DateItem::day()
-{
-    return ui->label->text();
+QString DateItem::day() {
+    return ui->solarDay->text();
 }
 
-QString DateItem::cday()
-{
-    return ui->label_2->text();
+QString DateItem::cday() {
+    return ui->lunarDay->text();
 }
 
-void DateItem::clear()
-{
-    ui->label->clear();
-    ui->label_2->clear();
+void DateItem::clear() {
+    ui->solarDay->clear();
+    ui->lunarDay->clear();
     ui->noteCorner->hide();
     this->clearstyle();
 }
 
-void DateItem::clearstyle()
-{
+void DateItem::clearstyle() {
     this->ui->bg->setStyleSheet(this->oriItemStyle);
-    ui->label->setStyleSheet(this->oriDayStyle);
-    ui->label_2->setStyleSheet(this->oriCDayStyle);
+    ui->solarDay->setStyleSheet(this->oriDayStyle);
+    ui->lunarDay->setStyleSheet(this->oriCDayStyle);
     this->isFocus = false;
 }
 
-void DateItem::setcolor()
-{
+void DateItem::setcolor() {
     QPalette pa;
 //    pa.setColor(QPalette::WindowText,Qt::red);
 //    pa.setColor(QPalette::WindowText,QColor(102, 102, 102));
     pa.setColor(QPalette::WindowText,QColor(215, 25, 24));
-    ui->label->setPalette(pa);
-    ui->label_2->setPalette(pa);
+    ui->solarDay->setPalette(pa);
+    ui->lunarDay->setPalette(pa);
 }
 
-void DateItem::setToday()
-{
+void DateItem::setToday() {
     this->ui->bg->setStyleSheet(this->clickiItemStyle);
-    ui->label->setStyleSheet(this->clickDayStyle);
-    ui->label_2->setStyleSheet(this->clickCDayStyle);
+    ui->solarDay->setStyleSheet(this->clickDayStyle);
+    ui->lunarDay->setStyleSheet(this->clickCDayStyle);
     this->isFocus = true;
 }

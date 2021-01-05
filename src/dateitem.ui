@@ -16,7 +16,7 @@
   <property name="styleSheet">
    <string notr="true"/>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="solarDay">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -32,7 +32,7 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="lunarDay">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -80,8 +80,8 @@
   </widget>
   <zorder>bg</zorder>
   <zorder>noteCorner</zorder>
-  <zorder>label</zorder>
-  <zorder>label_2</zorder>
+  <zorder>solarDay</zorder>
+  <zorder>lunarDay</zorder>
   <zorder>datemaskwidget</zorder>
  </widget>
  <customwidgets>

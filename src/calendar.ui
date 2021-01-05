@@ -16,7 +16,7 @@
   <property name="styleSheet">
    <string notr="true"/>
   </property>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="weekSun">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -38,7 +38,7 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
+  <widget class="QLabel" name="weekMon">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -60,7 +60,7 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_5">
+  <widget class="QLabel" name="weekTue">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -82,7 +82,7 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_6">
+  <widget class="QLabel" name="weekWed">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -104,7 +104,7 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_7">
+  <widget class="QLabel" name="weekThu">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -126,7 +126,7 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_8">
+  <widget class="QLabel" name="weekFri">
    <property name="geometry">
     <rect>
      <x>250</x>
@@ -148,7 +148,7 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_9">
+  <widget class="QLabel" name="weekSat">
    <property name="geometry">
     <rect>
      <x>300</x>
@@ -1389,13 +1389,13 @@
    </property>
   </widget>
   <zorder>yijibg</zorder>
-  <zorder>label_3</zorder>
-  <zorder>label_4</zorder>
-  <zorder>label_5</zorder>
-  <zorder>label_6</zorder>
-  <zorder>label_7</zorder>
-  <zorder>label_8</zorder>
-  <zorder>label_9</zorder>
+  <zorder>weekSun</zorder>
+  <zorder>weekMon</zorder>
+  <zorder>weekTue</zorder>
+  <zorder>weekWed</zorder>
+  <zorder>weekThu</zorder>
+  <zorder>weekFri</zorder>
+  <zorder>weekSat</zorder>
   <zorder>label_10</zorder>
   <zorder>label_12</zorder>
   <zorder>label_13</zorder>

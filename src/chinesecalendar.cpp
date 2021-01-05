@@ -463,8 +463,11 @@ ChineseCalendar::ChineseCalendar(QWidget *parent)
     this->createTray();
 
     note = new Cnote;
-    QDesktopWidget desktop;
-    int width = desktop.screenGeometry().width();
+    //QDesktopWidget desktop;
+    QScreen *screen = QGuiApplication::primaryScreen();
+    QRect screenRect = screen->availableVirtualGeometry();
+    //int width = desktop.screenGeometry().width();
+    int width = screenRect.width();
     note->setGeometry(QRect(width-400,80,196,206));
     connect(note,SIGNAL(save(QString)),this,SLOT(savedata(QString)));
     note->hide();
