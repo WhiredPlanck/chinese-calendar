@@ -75,7 +75,7 @@ bool DateItem::eventFilter(QObject *o, QEvent *ev) {
         } else {
             return QObject::eventFilter(o,ev);
         }
-        return true; // 没有返回值的话，程序会就此崩溃
+        return true;
     }
 }
 
