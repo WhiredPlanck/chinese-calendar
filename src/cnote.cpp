@@ -53,32 +53,27 @@ Cnote::Cnote(QWidget *parent) :
 
 }
 
-Cnote::~Cnote()
-{
+Cnote::~Cnote() {
 
 }
 
-void Cnote::clean()
-{
+void Cnote::clean() {
     this->textedit->clear();
 }
 
-void Cnote::savenote()
-{
+void Cnote::savenote() {
     emit save(this->textedit->toPlainText());
 
     this->hide();
     this->textedit->clear();
 }
 
-void Cnote::cancelnote()
-{
+void Cnote::cancelnote() {
     this->hide();
     this->textedit->clear();
 }
 
-void Cnote::paintEvent(QPaintEvent *)
-{
+void Cnote::paintEvent(QPaintEvent *) {
 //    QPainter painter(this);
     //painter.drawPixmap(0,0,pix.scaled(this->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation));
 //    QStyleOption opt;
@@ -86,18 +81,15 @@ void Cnote::paintEvent(QPaintEvent *)
 //    style()->drawPrimitive(QStyle::PE_Widget, &opt, &painter, this);
 }
 
-void  Cnote::mouseMoveEvent(QMouseEvent *event)
-{
+void  Cnote::mouseMoveEvent(QMouseEvent *event) {
     move(event->globalPos() - dragPos);
     setWindowOpacity(0.5);
 }
 
-void  Cnote::mousePressEvent(QMouseEvent *event)
-{
+void  Cnote::mousePressEvent(QMouseEvent *event) {
     dragPos = event->globalPos() - frameGeometry().topLeft();
 }
 
-void  Cnote::mouseReleaseEvent(QMouseEvent *event)
-{
+void  Cnote::mouseReleaseEvent(QMouseEvent *event) {
     setWindowOpacity(1.0);
 }

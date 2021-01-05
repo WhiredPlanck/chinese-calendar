@@ -136,8 +136,7 @@ ChineseCalendar::ChineseCalendar(QWidget *parent)
     QString haveplan=QString("写便签请双击日期");
     QString noplan=QString("写便签请双击日期");
     int num=cnote.count();
-    while( num > 0 && cnote.at(num-1).isSpace())
-    {
+    while ( num > 0 && cnote.at(num-1).isSpace()) {
         num--;
     }
     if(cnote.isEmpty() || num == 0)
@@ -473,13 +472,11 @@ ChineseCalendar::ChineseCalendar(QWidget *parent)
     note->hide();
 }
 
-ChineseCalendar::~ChineseCalendar()
-{
+ChineseCalendar::~ChineseCalendar() {
   delete mycalendat;
 }
 
-void ChineseCalendar::setclickday(QString day)
-{
+void ChineseCalendar::setclickday(QString day) {
     clickday = day.toInt();
     int year = this->YearSelect->currentText().toInt();
     int month = this->monthCombo->currentText().toInt();
@@ -493,8 +490,7 @@ void ChineseCalendar::setclickday(QString day)
     note->exec();
 }
 
-void ChineseCalendar::savedata(QString data)
-{
+void ChineseCalendar::savedata(QString data) {
     int year = this->YearSelect->currentText().toInt();
     int month = this->monthCombo->currentText().toInt();
     int day = clickday;
@@ -505,8 +501,7 @@ void ChineseCalendar::savedata(QString data)
 }
 
 
-void ChineseCalendar::createTray()
-{
+void ChineseCalendar::createTray() {
     this->actionShow = new QAction(tr("隐藏/显示"), this);
     connect(actionShow, SIGNAL(triggered()), this, SLOT(showOrHide()));
     QShortcut *shortcut = new QShortcut(QKeySequence("Ctrl+H"), this);
@@ -556,8 +551,7 @@ void ChineseCalendar::createTray()
     // read user customizated skin files
     readSkinFiles();
 
-    foreach (QString strSkin, m_strFileList)
-    {
+    foreach (QString strSkin, m_strFileList) {
         QAction *actionNew = new QAction(strSkin, this);
         actionNew->setCheckable(true);
         actionNew->setChecked(m_skinName == strSkin);
@@ -603,8 +597,7 @@ void ChineseCalendar::createTray()
     this->trayIcon->show();
 }
 
-void ChineseCalendar::paintEvent(QPaintEvent *)
-{
+void ChineseCalendar::paintEvent(QPaintEvent *) {
 //    QStyleOption opt;
 //    opt.init(this);
 //    QPainter painter(this);
@@ -641,10 +634,8 @@ void ChineseCalendar::paintEvent(QPaintEvent *)
 //    painter.drawLine(335,69,335,303);
 }
 
-void ChineseCalendar::setItemLayout()
-{
-    if(isTall == false)
-    {
+void ChineseCalendar::setItemLayout() {
+    if(isTall == false) {
         map->value("1-1")->resizeItem(49,50);
         map->value("1-2")->resizeItem(49,50);
         map->value("1-3")->resizeItem(49,50);
@@ -738,8 +729,7 @@ void ChineseCalendar::setItemLayout()
     map->value("6-7")->move(300,326);
 }
 
-void ChineseCalendar::resetItemLayout()
-{
+void ChineseCalendar::resetItemLayout() {
     map->value("1-1")->resizeItem(49,41);
     map->value("1-2")->resizeItem(49,41);
     map->value("1-3")->resizeItem(49,41);
@@ -833,14 +823,12 @@ void ChineseCalendar::resetItemLayout()
     map->value("6-7")->move(300,281);
 }
 
-void ChineseCalendar::setTime()
-{
+void ChineseCalendar::setTime() {
     QDateTime dateTime = QDateTime::currentDateTime();
     this->label_15->setText(dateTime.toString("hh:mm:ss"));
 }
 
-void ChineseCalendar::resetcalendardate(QString day)
-{
+void ChineseCalendar::resetcalendardate(QString day) {
     QDate date(this->YearSelect->currentText().toInt(),this->monthCombo->currentText().toInt(),day.toInt());
     clearbackground();
     selectedDate = date;
@@ -882,8 +870,7 @@ void ChineseCalendar::resetcalendardate(QString day)
     QString noplan=QString("写便签请双击日期");
     cnote=mycalendat->ctcl_displaydata(date.year(),date.month(),date.day());
     int num=cnote.count();
-    while( num > 0 && cnote.at(num-1).isSpace())
-    {
+    while( num > 0 && cnote.at(num-1).isSpace()) {
         num--;
     }
     if(cnote.isEmpty() || num == 0)
@@ -926,27 +913,22 @@ void ChineseCalendar::resetcalendardate(QString day)
     this->label_18->setText(ji);
 }
 
-CCalendar ChineseCalendar::fixshengxiao(QDate date)
-{
+CCalendar ChineseCalendar::fixshengxiao(QDate date) {
     QDate fixdate = date.addDays(1);
     struct CCalendar fix;
     mycalendat->ctcl_solar_to_lunar(fixdate.year(),fixdate.month(),fixdate.day(),&fix);
-    if (fix.sterm == "立春")
-    {
+    if (fix.sterm == "立春") {
         fixdate = fixdate.addDays(-2);
         mycalendat->ctcl_solar_to_lunar(fixdate.year(),fixdate.month(),fixdate.day(),&fix);
         return fix;
-    }
-    else
-    {
+    } else {
         fixdate = fixdate.addDays(-1);
         mycalendat->ctcl_solar_to_lunar(fixdate.year(),fixdate.month(),fixdate.day(),&fix);
         return fix;
     }
 }
 
-void ChineseCalendar::backtoday()
-{
+void ChineseCalendar::backtoday() {
     QDate today = QDate::currentDate();
     YearSelect->setCurrentIndex(today.year() - 1900);
     monthCombo->setCurrentIndex(today.month() - 1);
@@ -954,8 +936,7 @@ void ChineseCalendar::backtoday()
     setCalendar();
 }
 
-void ChineseCalendar::setCalendar(bool flag)
-{
+void ChineseCalendar::setCalendar(bool flag) {
     struct CCalendar c;
     cleardate();
     QDate date(selectedDate.year(), selectedDate.month(), 1);
@@ -964,7 +945,7 @@ void ChineseCalendar::setCalendar(bool flag)
         mycalendat->ctcl_solar_to_lunar(selectedDate.year(),selectedDate.month(),date.day(),&c);
         QString mycday;
         mycday=c.cday;
-        if(c.sterm.at(0) >=QChar('0') && c.sterm.at(0) <= QChar('9'))
+        if (c.sterm.at(0) >=QChar('0') && c.sterm.at(0) <= QChar('9'))
           mycday=c.cday;
         else
         {
@@ -973,7 +954,7 @@ void ChineseCalendar::setCalendar(bool flag)
           else
               mycday=c.sterm;
         }
-        if(c.ischoliday)
+        if (c.ischoliday)
             mycday=c.choliday;
         int day = date.day();
         if (weekDay == 7)
@@ -995,8 +976,7 @@ void ChineseCalendar::setCalendar(bool flag)
          date = date.addDays(1);
     }
 
-    if (!map->value("6-1")->day().isNull())
-    {
+    if (!map->value("6-1")->day().isNull()) {
         map->value("6-1")->show();
         map->value("6-2")->show();
         map->value("6-3")->show();
@@ -1008,16 +988,14 @@ void ChineseCalendar::setCalendar(bool flag)
     } 
 
     QDate today = QDate::currentDate();
-    if(today.year() == selectedDate.year() && today.month() == selectedDate.month() && today.day() == selectedDate.day())
-    {
+    if(today.year() == selectedDate.year() && today.month() == selectedDate.month() && today.day() == selectedDate.day()) {
         setDayFocus(today);
     }
 
     setDayFocus(selectedDate, false); // set the selected date in focus
 }
 
-void ChineseCalendar::clearbackground()
-{
+void ChineseCalendar::clearbackground() {
     map->value("1-1")->clearstyle();
     map->value("1-2")->clearstyle();
     map->value("1-3")->clearstyle();
@@ -1062,8 +1040,7 @@ void ChineseCalendar::clearbackground()
     map->value("6-7")->clearstyle();
 }
 
-void ChineseCalendar::cleardate()
-{
+void ChineseCalendar::cleardate() {
     map->value("1-1")->clear();
     map->value("1-2")->clear();
     map->value("1-3")->clear();
@@ -1116,18 +1093,13 @@ void ChineseCalendar::cleardate()
     setItemLayout();
 }
 
-void ChineseCalendar::mousePressEvent(QMouseEvent *event)
-{
-    if (event->button() == Qt::LeftButton)
-    {
-        if (map->value("6-1")->isHidden())
-        {
+void ChineseCalendar::mousePressEvent(QMouseEvent *event) {
+    if (event->button() == Qt::LeftButton) {
+        if (map->value("6-1")->isHidden()) {
             if (event->x()>5 && event->x()<390 && event->y()>69 && event->y()<304)
                 moveable = false;
             else moveable = true;
-        }
-        else
-        {
+        } else {
             if (event->x()>5 && event->x()<390 && event->y()>69 && event->y()<304)
                 moveable = false ;
             else moveable = true;
@@ -1138,18 +1110,13 @@ void ChineseCalendar::mousePressEvent(QMouseEvent *event)
 
 }
 
-void ChineseCalendar::mouseMoveEvent(QMouseEvent *event)
-{
-    if (event->buttons() & Qt::LeftButton && moveable == true )
-    {
-        if (map->value("6-1")->isHidden())
-        {
+void ChineseCalendar::mouseMoveEvent(QMouseEvent *event) {
+    if (event->buttons() & Qt::LeftButton && moveable == true){
+        if (map->value("6-1")->isHidden()) {
             if (event->x()>5 && event->x()<390 && event->y()>69 && event->y()<304)
                 return ;
             else move(event->globalPos() - dragPos);
-        }
-        else
-        {
+        } else {
             if (event->x()>5 && event->x()<390 && event->y()>69 && event->y()<304)
                 return ;
             else move(event->globalPos() - dragPos);
@@ -1160,85 +1127,66 @@ void ChineseCalendar::mouseMoveEvent(QMouseEvent *event)
 
 }
 
-void ChineseCalendar::mouseReleaseEvent(QMouseEvent *event)
-{
-    if (event->button() == Qt::LeftButton)
-    {
+void ChineseCalendar::mouseReleaseEvent(QMouseEvent *event) {
+    if (event->button() == Qt::LeftButton) {
         setWindowOpacity(1);
     }
     event->accept();
 }
 
-void ChineseCalendar::setMonth(int month)
-{
-
+void ChineseCalendar::setMonth(int month) {
     int day=0;
     int newmonth = month+1;
-    if(newmonth<=0)
-    {
+    if (newmonth<=0) {
         newmonth = 12;
         monthCombo->setCurrentIndex(11);
     }
-    if(newmonth>12)
-    {
+    if (newmonth>12) {
         newmonth = 1;
     }
-    if(newmonth ==1 || newmonth ==3 || newmonth == 5 || newmonth == 7 || newmonth  == 8 || newmonth == 10 || newmonth ==12)
-    {
+    if (newmonth ==1 || newmonth ==3 || newmonth == 5 || newmonth == 7 || newmonth  == 8 || newmonth == 10 || newmonth ==12) {
         day =31;
-    }
-    else if(newmonth ==4 || newmonth==6 || newmonth ==9 || newmonth ==11)
-    {
+    } else if (newmonth ==4 || newmonth==6 || newmonth ==9 || newmonth ==11) {
        day =30;
     }
-   if(selectedDate.year()%4 ==0 && selectedDate.year()%100!=0)
-    {
+   if (selectedDate.year()%4 ==0 && selectedDate.year()%100!=0) {
             day = 29;
-    }
-    else if(selectedDate.year()%400 ==0)
-    {
+    } else if (selectedDate.year()%400 ==0) {
             day = 29;
-    }
-    else
-    {
+    } else {
             day = 28;
     }
     selectedDate = QDate(selectedDate.year(),newmonth,day);
     setCalendar();
 }
 
-void ChineseCalendar::setYear(int year)
-{
+void ChineseCalendar::setYear(int year) {
     selectedDate = QDate(year+1900, selectedDate.month(), selectedDate.day());
     setCalendar();
 }
 
-void ChineseCalendar::on_TbpreviousYear_clicked()
-{
-    if(YearSelect->currentIndex() != 0)
+void ChineseCalendar::on_TbpreviousYear_clicked() {
+    if (YearSelect->currentIndex() != 0)
         YearSelect->setCurrentIndex(YearSelect->currentIndex()-1);
 }
 
-void ChineseCalendar::on_TbpreviousMonth_clicked()
-{
-    if (monthCombo->currentIndex() == 0 && YearSelect->currentIndex() != 0)
-    {
+void ChineseCalendar::on_TbpreviousMonth_clicked() {
+    if (monthCombo->currentIndex() == 0 && YearSelect->currentIndex() != 0) {
         YearSelect->setCurrentIndex(YearSelect->currentIndex()-1);
         monthCombo->setCurrentIndex(11);
-    }
-    else
+    } else {
         monthCombo->setCurrentIndex(monthCombo->currentIndex()-1);
+    }
 }
 
 void ChineseCalendar::on_TbnextMonth_clicked()
 {
-    if (monthCombo->currentIndex() == 11 && YearSelect->currentIndex() != 150)
-    {
+    if (monthCombo->currentIndex() == 11 && YearSelect->currentIndex() != 150) {
         YearSelect->setCurrentIndex(YearSelect->currentIndex()+1);
         monthCombo->setCurrentIndex(0);
-    }
-    else
+    } else {
         monthCombo->setCurrentIndex(monthCombo->currentIndex()+1);
+    }
 }
 
 void ChineseCalendar::on_TbnextYear_clicked()
@@ -1247,10 +1195,8 @@ void ChineseCalendar::on_TbnextYear_clicked()
         YearSelect->setCurrentIndex(YearSelect->currentIndex()+1);
 }
 
-void ChineseCalendar::handle_trayIcon_activated(QSystemTrayIcon::ActivationReason reason)
-{
-    switch(reason)
-    {
+void ChineseCalendar::handle_trayIcon_activated(QSystemTrayIcon::ActivationReason reason) {
+    switch(reason) {
         case QSystemTrayIcon::Trigger:
             this->showOrHide();
             break;
@@ -1259,19 +1205,15 @@ void ChineseCalendar::handle_trayIcon_activated(QSystemTrayIcon::ActivationReaso
     }
 }
 
-void ChineseCalendar::showOrHide()
-{
-    if(this->isHidden())
-    {
+void ChineseCalendar::showOrHide() {
+    if(this->isHidden()) {
         this->show();
-    }else
+    } else
         this->hide();
 }
 
-void ChineseCalendar::setMode(int nMode, bool bFlag)
-{
-    switch (nMode)
-    {
+void ChineseCalendar::setMode(int nMode, bool bFlag) {
+    switch (nMode) {
     case 1: // stays on top
         this->setWindowFlags(Qt::ToolTip | Qt::FramelessWindowHint);
         break;
@@ -1289,20 +1231,15 @@ void ChineseCalendar::setMode(int nMode, bool bFlag)
         this->show();
 }
 
-void ChineseCalendar::slotChangeSkin()
-{
+void ChineseCalendar::slotChangeSkin() {
     QAction *action = qobject_cast<QAction *>(sender());
     QString strSkin = action->text();
 
-    if (!strSkin.isEmpty())
-    {
-        if (strSkin.toLower() == "default" || strSkin.toLower() == "blue")
-        {
+    if (!strSkin.isEmpty()) {
+        if (strSkin.toLower() == "default" || strSkin.toLower() == "blue") {
             strSkin = strSkin.toLower();
             changeSkin(strSkin);
-        }
-        else
-        {
+        } else {
             changeSkin(strSkin, false);
         }
     }
@@ -1314,8 +1251,7 @@ void ChineseCalendar::slotChangeSkin()
     writeSetting();
 }
 
-void ChineseCalendar::slotChangeMode()
-{
+void ChineseCalendar::slotChangeMode() {
     m_nMode = 0;
     if (actionStaysOnTop->isChecked())
         m_nMode = 1;
@@ -1329,53 +1265,43 @@ void ChineseCalendar::slotChangeMode()
     writeSetting();
 }
 
-void ChineseCalendar::changeSkin(const QString &skin, bool bFlag)
-{
+void ChineseCalendar::changeSkin(const QString &skin, bool bFlag) {
     QString strFilename("");
 
-    if (bFlag)
-    {
+    if (bFlag) {
 #ifdef DEBUG
         strFilename = QCoreApplication::applicationDirPath() + QString("/skin/%1-skin.qss").arg(skin);
 #else
         strFilename = QString("/usr/share/chinese-calendar/skin/%1-skin.qss").arg(skin);
 #endif
-    }
-    else
-    {
+    } else {
         strFilename =  QDir::homePath() + QString("/.local/share/chinese-calendar/skin/%1.qss").arg(skin);
     }
 
     QFile qss(strFilename);
-    if (qss.open(QFile::ReadOnly))
-    {
+    if (qss.open(QFile::ReadOnly)) {
         qApp->setStyleSheet(qss.readAll());
         qss.close();
     }
 }
 
-void ChineseCalendar::readSkinFiles()
-{
+void ChineseCalendar::readSkinFiles() {
     QString systemdirectory;
     systemdirectory = QDir::homePath() + "/.local/share/chinese-calendar/skin/";
 
     QDir dir(systemdirectory);
-    foreach(QFileInfo info, dir.entryInfoList())
-    {
-        if (info.isFile() && info.suffix() == "qss")
-        {
+    foreach(QFileInfo info, dir.entryInfoList()) {
+        if (info.isFile() && info.suffix() == "qss") {
             m_strFileList << info.baseName();
         }
     }
 }
 
-void ChineseCalendar::resetDateItemColor()
-{
+void ChineseCalendar::resetDateItemColor() {
     setCalendar(true);
 }
 
-void ChineseCalendar::setDayFocus(QDate &date, bool bFlag)
-{
+void ChineseCalendar::setDayFocus(QDate &date, bool bFlag) {
     int d = date.day();
     int w = date.dayOfWeek();
     if (w == 7)
@@ -1383,41 +1309,34 @@ void ChineseCalendar::setDayFocus(QDate &date, bool bFlag)
     int r = (d + (6 - w) + 7 -1)/7;
 
     QString add = QString("%1-%2").arg(r).arg(w+1);
-    if (bFlag)
-    {
+    if (bFlag) {
         resetcalendardate(QString::number(date.day()));
     }
 
     map->value(add)->setToday();
 }
 
-void ChineseCalendar::showAbout()
-{
+void ChineseCalendar::showAbout() {
     aboutDlg->show();
 }
 
-void ChineseCalendar::setAutoStart(bool bFlag)
-{
+void ChineseCalendar::setAutoStart(bool bFlag) {
     /* 设置是否开机自启动
      * 当该目录下没有desktop文件时开机启动,有则不开机启动
      * 因为系统安装时没有该用户目录,所以第一次是默认开机启动
      */
-    if (!bFlag)
-    {
+    if (!bFlag) {
         // 需要将desktop文件拷贝至~/.config/autostart目录下
         QString strDesktop = "/usr/share/applications/chinese-calendar.desktop";
         QString strCmd = "cp " + strDesktop + " ~/.local/share/chinese-calendar";
         const char *cmd = strCmd.toUtf8().constData();
         system(cmd);
-    }
-    else
-    {
+    } else {
         QString filename = QDir::homePath() + "/.local/share/chinese-calendar/chinese-calendar.desktop";
         QFile file(filename);
 
         // if chinese-calendar.desktop is exist, then remove it.
-        if (file.exists())
-        {
+        if (file.exists()) {
             file.remove();
         }
     }
@@ -1425,20 +1344,17 @@ void ChineseCalendar::setAutoStart(bool bFlag)
 //    writeSetting();
 }
 
-bool ChineseCalendar::checkAutoStart()
-{
+bool ChineseCalendar::checkAutoStart() {
     QString filename = QDir::homePath() + "/.local/share/chinese-calendar/chinese-calendar.desktop";
     QFile file(filename);
-    if (file.exists())
-    {
+    if (file.exists()) {
         return false;
-    }else{
+    } else {
         return true;
     }
 }
 
-void ChineseCalendar::readSetting()
-{
+void ChineseCalendar::readSetting() {
     QSettings settings("chinese-calendar", "chinese-calendar");
 
     settings.beginGroup("Config");
@@ -1458,8 +1374,7 @@ void ChineseCalendar::readSetting()
 
     actionAutoStart->setChecked(bAutoStart);
 
-    switch (m_nMode)
-    {
+    switch (m_nMode) {
     case 1:
         actionStaysOnTop->setChecked(true);
         actionStaysOnBottom->setChecked(false);
@@ -1481,19 +1396,15 @@ void ChineseCalendar::readSetting()
 
     setMode(m_nMode, false);
 
-    if (m_skinName == "default" || m_skinName == "blue")
-    {
+    if (m_skinName == "default" || m_skinName == "blue") {
         changeSkin(m_skinName);
-    }
-    else
-    {
+    } else {
         changeSkin(m_skinName, false);
     }
     setCalendar();
 }
 
-void ChineseCalendar::writeSetting()
-{
+void ChineseCalendar::writeSetting() {
     QSettings settings("chinese-calendar", "chinese-calendar");
 
     settings.beginGroup("Config");

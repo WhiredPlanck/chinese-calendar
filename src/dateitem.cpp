@@ -70,11 +70,12 @@ bool DateItem::eventFilter(QObject *o, QEvent *ev) {
     if (o == ui->datemaskwidget) {
         if (ev->type() == QEvent::Enter) {
             this->enter();
-        } else if(ev->type() == QEvent::Leave) {
+        } else if (ev->type() == QEvent::Leave) {
             this->leave();
         } else {
             return QObject::eventFilter(o,ev);
         }
+        return true;
     }
 }
 
@@ -87,7 +88,7 @@ void DateItem::resizeItem(int x, int y) {
         ui->lunarDay->resize(49,20);
         ui->lunarDay->move(0,27);
     }
-    if( y == 41 ) {
+    if ( y == 41 ) {
         ui->solarDay->resize(49,22);
         ui->solarDay->move(0,0);
         ui->lunarDay->resize(49,17);

@@ -29,17 +29,14 @@ AboutDialog::AboutDialog(QWidget *parent) :
 */
 }
 
-AboutDialog::~AboutDialog()
-{
+AboutDialog::~AboutDialog() {
     delete ui;
 }
 
-void AboutDialog::accept()
-{
+void AboutDialog::accept() {
     hide();
 }
 
-void AboutDialog::openUrl(QString url)
-{
+void AboutDialog::openUrl(QString url) {
     QDesktopServices::openUrl(QUrl(url));
 }
