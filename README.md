@@ -12,7 +12,8 @@
 
 ## Known Issue(s)
 
-As for now, once the window show up, it will be quickly crashed. (Arch Linux KDE)
+~~As for now, once the window show up, it will be quickly crashed. (Arch Linux KDE)~~
+Solved.
 
 ## How to build
 
