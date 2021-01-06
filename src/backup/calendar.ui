@@ -16,7 +16,7 @@
   <property name="styleSheet">
    <string notr="true"/>
   </property>
-  <widget class="QLabel" name="weekSun">
+  <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -27,7 +27,7 @@
    </property>
    <property name="font">
     <font>
-     <family>Noto Sans</family>
+     <family>文泉驿微米黑</family>
      <pointsize>10</pointsize>
     </font>
    </property>
@@ -38,7 +38,7 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="weekMon">
+  <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -49,7 +49,7 @@
    </property>
    <property name="font">
     <font>
-     <family>Noto Sans</family>
+     <family>文泉驿微米黑</family>
      <pointsize>10</pointsize>
     </font>
    </property>
@@ -60,7 +60,7 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="weekTue">
+  <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -71,7 +71,7 @@
    </property>
    <property name="font">
     <font>
-     <family>Noto Sans</family>
+     <family>文泉驿微米黑</family>
      <pointsize>10</pointsize>
     </font>
    </property>
@@ -82,7 +82,7 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="weekWed">
+  <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -93,7 +93,7 @@
    </property>
    <property name="font">
     <font>
-     <family>Noto Sans</family>
+     <family>文泉驿微米黑</family>
      <pointsize>10</pointsize>
     </font>
    </property>
@@ -104,7 +104,7 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="weekThu">
+  <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -115,7 +115,7 @@
    </property>
    <property name="font">
     <font>
-     <family>Noto Sans</family>
+     <family>文泉驿微米黑</family>
      <pointsize>10</pointsize>
     </font>
    </property>
@@ -126,7 +126,7 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="weekFri">
+  <widget class="QLabel" name="label_8">
    <property name="geometry">
     <rect>
      <x>250</x>
@@ -137,7 +137,7 @@
    </property>
    <property name="font">
     <font>
-     <family>Noto Sans</family>
+     <family>文泉驿微米黑</family>
      <pointsize>10</pointsize>
     </font>
    </property>
@@ -148,7 +148,7 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="weekSat">
+  <widget class="QLabel" name="label_9">
    <property name="geometry">
     <rect>
      <x>300</x>
@@ -159,7 +159,7 @@
    </property>
    <property name="font">
     <font>
-     <family>Noto Sans</family>
+     <family>文泉驿微米黑</family>
      <pointsize>10</pointsize>
     </font>
    </property>
@@ -353,7 +353,7 @@
     </property>
     <property name="font">
      <font>
-      <family>Noto Sans</family>
+      <family>文泉驿微米黑</family>
       <pointsize>14</pointsize>
       <weight>50</weight>
       <bold>false</bold>
@@ -377,7 +377,7 @@
     </property>
     <property name="font">
      <font>
-      <family>Noto Sans</family>
+      <family>文泉驿微米黑</family>
       <pointsize>14</pointsize>
       <weight>50</weight>
       <bold>false</bold>
@@ -401,7 +401,7 @@
     </property>
     <property name="font">
      <font>
-      <family>Noto Sans</family>
+      <family>文泉驿微米黑</family>
      </font>
     </property>
     <item>
@@ -476,7 +476,7 @@
     </property>
     <property name="font">
      <font>
-      <family>Noto Sans</family>
+      <family>文泉驿微米黑</family>
       <pointsize>12</pointsize>
       <weight>50</weight>
       <italic>false</italic>
@@ -501,7 +501,7 @@
     </property>
     <property name="font">
      <font>
-      <family>Noto Sans</family>
+      <family>文泉驿微米黑</family>
      </font>
     </property>
     <property name="text">
@@ -522,7 +522,7 @@
     </property>
     <property name="font">
      <font>
-      <family>Noto Sans</family>
+      <family>文泉驿微米黑</family>
       <pointsize>14</pointsize>
       <weight>50</weight>
       <italic>false</italic>
@@ -549,7 +549,7 @@
     </property>
     <property name="font">
      <font>
-      <family>Noto Sans</family>
+      <family>文泉驿微米黑</family>
      </font>
     </property>
     <property name="text">
@@ -570,7 +570,7 @@
     </property>
     <property name="font">
      <font>
-      <family>Noto Sans</family>
+      <family>文泉驿微米黑</family>
       <pointsize>14</pointsize>
       <weight>50</weight>
       <italic>false</italic>
@@ -1389,13 +1389,13 @@
    </property>
   </widget>
   <zorder>yijibg</zorder>
-  <zorder>weekSun</zorder>
-  <zorder>weekMon</zorder>
-  <zorder>weekTue</zorder>
-  <zorder>weekWed</zorder>
-  <zorder>weekThu</zorder>
-  <zorder>weekFri</zorder>
-  <zorder>weekSat</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_4</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_6</zorder>
+  <zorder>label_7</zorder>
+  <zorder>label_8</zorder>
+  <zorder>label_9</zorder>
   <zorder>label_10</zorder>
   <zorder>label_12</zorder>
   <zorder>label_13</zorder>
