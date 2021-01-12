@@ -72,7 +72,9 @@ INSTALLS += inst \
     readme \
     target
 
-include(src/qtsingleapplication/src/qtsingleapplication.pri)
+#include(src/qtsingleapplication/src/qtsingleapplication.pri)
+include(src/singleapplication/singleapplication.pri)
+DEFINES += QAPPLICATION_CLASS=QApplication
 
 QT += core gui\
     sql \

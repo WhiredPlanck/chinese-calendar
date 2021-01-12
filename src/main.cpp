@@ -30,7 +30,8 @@
 #include <QTextCodec>
 //#include <QDesktopWidget>
 #include <QScreen>
-#include <QtSingleApplication>
+//#include <QtSingleApplication>
+#include <SingleApplication>
 #include "chinesecalendar.h"
 
 int main(int argc, char *argv[])
@@ -38,9 +39,9 @@ int main(int argc, char *argv[])
     //printf("First, you should copy database to `/usr/share/chinese-calendar/db/KylinLunar.db`\n\n");
     std::cout << "First, you should copy database to `/usr/share/chinese-calendar/db/KylinLunar.db`" << std::endl << std::endl;
     //单程序运行处理
-    QtSingleApplication app(argc, argv);
-    if (app.isRunning())
-        return 0;
+    SingleApplication app(argc, argv);
+    if (app.isSecondary())
+        app.exit( 0 );
 
 #if QT_VERSION < 0x050000
     QTextCodec::setCodecForTr(QTextCodec::codecForName("UTF-8"));
