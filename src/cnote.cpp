@@ -1,5 +1,4 @@
 #include "cnote.h"
-#include "ccbo.h"
 #include <QtGui>
 
 Cnote::Cnote(QWidget *parent) :

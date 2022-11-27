@@ -22,7 +22,6 @@
 
 #include "datemaskwidget.h"
 #include <QDebug>
-#include "chinesecalendar.h"
 DateMaskWidget::DateMaskWidget(QWidget *parent) :
     QWidget(parent)
 {

@@ -25,7 +25,6 @@
 
 #include <QtGui>
 #include <QWidget>
-#include "datemaskwidget.h"
 #include "ui_dateitem.h"
 
 #ifdef QT5XX

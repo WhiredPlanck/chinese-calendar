@@ -28,7 +28,6 @@
 
 #include <QWidget>
 #include <QMouseEvent>
-#include "cnote.h"
 
 
 #if QT_VERSION >= 0x050000
