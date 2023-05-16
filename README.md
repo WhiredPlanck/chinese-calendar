@@ -23,7 +23,6 @@ Then ...
 ```bash
 git clone https://github.com/whriedplanck/chinese-calendar
 cd chinese-calendar
-ln -sf src/datemaskwidget.h ./datamaskwidget.h # I can't figure out how to build without this step.
 qmake PREFIX=/usr
 make
 make install

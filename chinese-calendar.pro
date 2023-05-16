@@ -1,7 +1,7 @@
 TEMPLATE = app
 TARGET +=
 DEPENDPATH += $$PWD/
-INCLUDEPATH += $$PWD/
+INCLUDEPATH += $$PWD/src
 OBJECTS_DIR += build/
 
 
