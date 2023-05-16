@@ -71,13 +71,8 @@ ChineseCalendar::ChineseCalendar(QWidget *parent)
     if (chinesemonth == "十二月")
         chinesemonth = "腊月";
 
-    QString chineseday = QString("农历 %1%2").arg(chinesemonth).arg(datebase.cday);
-    QString chineseyear = QString("%1年(%2年)").arg(datebase.ganzhi).arg(datebase.shengxiao);
-
-    QString chineseyi = QString("%1").arg(datebase.yi);
-    QStringList chineseyilist = chineseyi.split("、");
-    QString chineseji = QString("%2").arg(datebase.ji);
-    QStringList chinesejilist = chineseji.split("、");
+    QString chineseday = QString("农历 %1%2").arg(chinesemonth, datebase.cday);
+    QString chineseyear = QString("%1年(%2年)").arg(datebase.ganzhi, datebase.shengxiao);
 
     QFont font;
     QPalette pa;
@@ -102,44 +97,19 @@ ChineseCalendar::ChineseCalendar(QWidget *parent)
     this->label_17->setFont(font);
     this->label_18->setFont(font);
 
-    QString yi=QString("");
-    QString ji=QString("");
-    if(chineseyilist.count() == 0 )
-       yi =QString("");
-    if(chineseyilist.count() >= 5)
-       yi = QString("").append(chineseyilist.at(0)).append("\n").append(chineseyilist.at(1)).append("\n").append(chineseyilist.at(2)).append("\n").append(chineseyilist.at(3)).append("\n").append(chineseyilist.at(4));
-    if(chineseyilist.count() == 4)
-       yi = QString("").append(chineseyilist.at(0)).append("\n").append(chineseyilist.at(1)).append("\n").append(chineseyilist.at(2)).append("\n").append(chineseyilist.at(3));
-    if (chineseyilist.count() == 3)
-       yi = QString("").append(chineseyilist.at(0)).append("\n").append(chineseyilist.at(1)).append("\n").append(chineseyilist.at(2));
-    if (chineseyilist.count() == 2)
-       yi = QString("").append(chineseyilist.at(0)).append("\n").append(chineseyilist.at(1));
-    if (chineseyilist.count() == 1)
-       yi = QString("").append(chineseyilist.at(0)).append("\n");
-    this->label_17->setText(yi);
+    auto yi = datebase.yi.split("、").mid(0, 5).join("\n");
+    auto ji = datebase.ji.split("、").mid(0, 5).join("\n");
 
-    if(chinesejilist.count() == 0 )
-       ji =QString("");
-    if(chinesejilist.count() >= 5)
-       ji = QString("").append(chinesejilist.at(0)).append("\n").append(chinesejilist.at(1)).append("\n").append(chinesejilist.at(2)).append("\n").append(chinesejilist.at(3)).append("\n").append(chinesejilist.at(4));
-    if(chinesejilist.count() == 4)
-       ji = QString("").append(chinesejilist.at(0)).append("\n").append(chinesejilist.at(1)).append("\n").append(chinesejilist.at(2)).append("\n").append(chinesejilist.at(3));
-    if (chinesejilist.count() == 3)
-       ji = QString("").append(chinesejilist.at(0)).append("\n").append(chinesejilist.at(1)).append("\n").append(chinesejilist.at(2));
-    if (chinesejilist.count() == 2)
-       ji = QString("").append(chinesejilist.at(0)).append("\n").append(chinesejilist.at(1));
-    if (chinesejilist.count() == 1)
-       ji = QString("").append(chinesejilist.at(0)).append("\n");
+    this->label_17->setText(yi);
     this->label_18->setText(ji);
 
     QString cnote=mycalendat->ctcl_displaydata(day.year(),day.month(),day.day());
     QString haveplan=QString("写便签请双击日期");
     QString noplan=QString("写便签请双击日期");
-    int num=cnote.count();
-    while ( num > 0 && cnote.at(num-1).isSpace()) {
-        num--;
-    }
-    if(cnote.isEmpty() || num == 0)
+    auto isCnoteBlank = cnote.isEmpty() || std::all_of(cnote.cbegin(), cnote.cend(), [](const QChar ch) {
+                            return ch.isSpace();
+                    });
+    if(isCnoteBlank)
         this->label_19->setText(noplan);
     else
         this->label_19->setText(haveplan);
@@ -218,7 +188,7 @@ void ChineseCalendar::setclickday(QString day) {
     int month = this->monthCombo->currentText().toInt();
     int today = clickday;
     selectedDate = QDate(year, month, today);
-    QString dateplan = QString("%1月%2日计划安排").arg(this->monthCombo->currentText()).arg(day);
+    QString dateplan = QString("%1月%2日计划安排").arg(this->monthCombo->currentText(), day);
     QString data;
     data=mycalendat->ctcl_displaydata(year,month,today);
     note->textedit->setText(data);
@@ -433,8 +403,8 @@ void ChineseCalendar::resetcalendardate(QString day) {
     if (selectmonth == "十二月")
         selectmonth = "腊月";
     struct CCalendar f = fixshengxiao(date);
-    QString selectday = QString("农历 %1%2").arg(selectmonth).arg(d.cday);
-    QString selectyear = QString("%1年(%2年)").arg(f.ganzhi).arg(f.shengxiao);
+    QString selectday = QString("农历 %1%2").arg(selectmonth, d.cday);
+    QString selectyear = QString("%1年(%2年)").arg(f.ganzhi, f.shengxiao);
     this->label_10->setText(day);
     this->label_12->setText(selecttime);
     this->label_13->setText(selectday);
@@ -444,46 +414,17 @@ void ChineseCalendar::resetcalendardate(QString day) {
     QString haveplan=QString("写便签请双击日期");
     QString noplan=QString("写便签请双击日期");
     cnote=mycalendat->ctcl_displaydata(date.year(),date.month(),date.day());
-    int num=cnote.count();
-    while( num > 0 && cnote.at(num-1).isSpace()) {
-        num--;
-    }
-    if(cnote.isEmpty() || num == 0)
+    auto isCnoteBlank = cnote.isEmpty() || std::all_of(cnote.cbegin(), cnote.cend(), [](const QChar ch) {
+                            return ch.isSpace();
+                        });
+    if(isCnoteBlank)
         this->label_19->setText(noplan);
     else
         this->label_19->setText(haveplan);
 
-    QString yi = QString("");
-    QString ji = QString("");
-    QString selectyi = QString("%1").arg(f.yi);
-    QStringList selectyilist = selectyi.split("、");
-    if(selectyilist.count() == 0 )
-       yi =QString("");
-    if(selectyilist.count() >= 5)
-       yi = QString("").append(selectyilist.at(0)).append("\n").append(selectyilist.at(1)).append("\n").append(selectyilist.at(2)).append("\n").append(selectyilist.at(3)).append("\n").append(selectyilist.at(4));
-    if(selectyilist.count() == 4)
-       yi = QString("").append(selectyilist.at(0)).append("\n").append(selectyilist.at(1)).append("\n").append(selectyilist.at(2)).append("\n").append(selectyilist.at(3));
-    if (selectyilist.count() == 3)
-       yi = QString("").append(selectyilist.at(0)).append("\n").append(selectyilist.at(1)).append("\n").append(selectyilist.at(2));
-    if (selectyilist.count() == 2)
-       yi = QString("").append(selectyilist.at(0)).append("\n").append(selectyilist.at(1));
-    if (selectyilist.count() == 1)
-       yi = QString("").append(selectyilist.at(0)).append("\n");
+    auto yi = f.yi.split("、").mid(0, 5).join("\n");
+    auto ji = f.ji.split("、").mid(0, 5).join("\n");
 
-    QString selectji = QString("%2").arg(f.ji);
-    QStringList selectjilist = selectji.split("、");
-    if(selectjilist.count() == 0 )
-       ji =QString("");
-    if(selectjilist.count() >= 5)
-       ji = QString("").append(selectjilist.at(0)).append("\n").append(selectjilist.at(1)).append("\n").append(selectjilist.at(2)).append("\n").append(selectjilist.at(3)).append("\n").append(selectjilist.at(4));
-    if(selectjilist.count() == 4)
-       ji = QString("").append(selectjilist.at(0)).append("\n").append(selectjilist.at(1)).append("\n").append(selectjilist.at(2)).append("\n").append(selectjilist.at(3));
-    if (selectjilist.count() == 3)
-       ji = QString("").append(selectjilist.at(0)).append("\n").append(selectjilist.at(1)).append("\n").append(selectjilist.at(2));
-    if (selectjilist.count() == 2)
-       ji = QString("").append(selectjilist.at(0)).append("\n").append(selectjilist.at(1));
-    if (selectjilist.count() == 1)
-       ji = QString("").append(selectjilist.at(0)).append("\n");
     this->label_17->setText(yi);
     this->label_18->setText(ji);
 }
@@ -551,11 +492,7 @@ void ChineseCalendar::setCalendar(bool flag) {
         map->value(site)->setcday(mycday);
 
         QString cnote = mycalendat->ctcl_displaydata(date.year(),date.month(),date.day());
-        int num=cnote.count();
-        if(cnote.isEmpty() || num == 0)
-            map->value(site)->setNoteCorner(false);
-        else
-            map->value(site)->setNoteCorner(true);
+         map->value(site)->setNoteCorner(!cnote.isEmpty());
 
         if(weekDay == 6 || weekDay == 0)
             map->value(site)->setcolor();
@@ -846,13 +783,8 @@ void ChineseCalendar::setAutoStart(bool bFlag) {
 }
 
 bool ChineseCalendar::checkAutoStart() {
-    QString filename = QDir::homePath() + "/.local/share/chinese-calendar/chinese-calendar.desktop";
-    QFile file(filename);
-    if (file.exists()) {
-        return false;
-    } else {
-        return true;
-    }
+    QFile autoStarFile(QDir::homePath() + "/.local/share/chinese-calendar/chinese-calendar.desktop");
+    return !autoStarFile.exists();
 }
 
 void ChineseCalendar::readSetting() {
@@ -875,25 +807,9 @@ void ChineseCalendar::readSetting() {
 
     actionAutoStart->setChecked(bAutoStart);
 
-    switch (m_nMode) {
-    case 1:
-        actionStaysOnTop->setChecked(true);
-        actionStaysOnBottom->setChecked(false);
-        actionStaysNormal->setChecked(false);
-        break;
-    case 2:
-        actionStaysOnTop->setChecked(false);
-        actionStaysOnBottom->setChecked(true);
-        actionStaysNormal->setChecked(false);
-        break;
-    case 3:
-        actionStaysOnTop->setChecked(false);
-        actionStaysOnBottom->setChecked(false);
-        actionStaysNormal->setChecked(true);
-        break;
-    default:
-        ;
-    }
+    actionStaysOnTop->setChecked(m_nMode == 1);
+    actionStaysOnBottom->setChecked(m_nMode == 2);
+    actionStaysNormal->setChecked(m_nMode == 3);
 
     setMode(m_nMode, false);
 
