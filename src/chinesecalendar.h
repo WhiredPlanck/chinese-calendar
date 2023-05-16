@@ -64,6 +64,7 @@ private:
     void setItemLayout();
     void resetItemLayout();
     CCalendar fixshengxiao(QDate);
+    void initDateItem(QString id, bool show, bool connect);
     Cnote *note;
 
     void paintEvent(QPaintEvent *);

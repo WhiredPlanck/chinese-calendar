@@ -161,284 +161,20 @@ ChineseCalendar::ChineseCalendar(QWidget *parent)
     // init date item
     map = new QMap<QString, DateItem *>();
 
-    DateItem *dateitem00 = new DateItem(this);
-    dateitem00->show();
-    map->insert(QString("1-1"), dateitem00 );
-    connect(dateitem00, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem00, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem00, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem01 = new DateItem(this);
-    dateitem01->show();
-    map->insert(QString("1-2"), dateitem01 );
-    connect(dateitem01, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem01, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem01, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem02 = new DateItem(this);
-    dateitem02->show();
-    map->insert(QString("1-3"), dateitem02 );
-    connect(dateitem02, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem02, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem02, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem03 = new DateItem(this);
-    dateitem03->show();
-    map->insert(QString("1-4"), dateitem03 );
-    connect(dateitem03, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem03, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem03, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem04 = new DateItem(this);
-    dateitem04->show();
-    map->insert(QString("1-5"), dateitem04 );
-    connect(dateitem04, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem04, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem04, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem05 = new DateItem(this);
-    dateitem05->show();
-    map->insert(QString("1-6"), dateitem05 );
-    connect(dateitem05, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem05, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem05, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem06 = new DateItem(this);
-    dateitem06->show();
-    map->insert(QString("1-7"), dateitem06 );
-    connect(dateitem06, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem06, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem06, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem10 = new DateItem(this);
-    dateitem10->show();
-    map->insert(QString("2-1"), dateitem10 );
-    connect(dateitem10, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem10, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem10, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem11 = new DateItem(this);
-    dateitem11->show();
-    map->insert(QString("2-2"), dateitem11 );
-    connect(dateitem11, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem11, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem11, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem12 = new DateItem(this);
-    dateitem12->show();
-    map->insert(QString("2-3"), dateitem12 );
-    connect(dateitem12, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem12, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem12, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem13 = new DateItem(this);
-    dateitem13->show();
-    map->insert(QString("2-4"), dateitem13 );
-    connect(dateitem13, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem13, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem13, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem14 = new DateItem(this);
-    dateitem14->show();
-    map->insert(QString("2-5"), dateitem14 );
-    connect(dateitem14, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem14, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem14, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem15 = new DateItem(this);
-    dateitem15->show();
-    map->insert(QString("2-6"), dateitem15 );
-    connect(dateitem15, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem15, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem15, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem16 = new DateItem(this);
-    dateitem16->show();
-    map->insert(QString("2-7"), dateitem16 );
-    connect(dateitem16, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem16, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem16, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem20 = new DateItem(this);
-    dateitem20->show();
-    map->insert(QString("3-1"), dateitem20 );
-    connect(dateitem20, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem20, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem20, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem21 = new DateItem(this);
-    dateitem21->show();
-    map->insert(QString("3-2"), dateitem21 );
-    connect(dateitem21, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem21, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem21, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem22 = new DateItem(this);
-    dateitem22->show();
-    map->insert(QString("3-3"), dateitem22 );
-    connect(dateitem22, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem22, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem22, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem23 = new DateItem(this);
-    dateitem23->show();
-    map->insert(QString("3-4"), dateitem23 );
-    connect(dateitem23, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem23, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem23, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem24 = new DateItem(this);
-    dateitem24->show();
-    map->insert(QString("3-5"), dateitem24 );
-    connect(dateitem24, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem24, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem24, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem25 = new DateItem(this);
-    dateitem25->show();
-    map->insert(QString("3-6"), dateitem25 );
-    connect(dateitem25, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem25, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem25, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem26 = new DateItem(this);
-    dateitem26->show();
-    map->insert(QString("3-7"), dateitem26 );
-    connect(dateitem26, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem26, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem26, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem30 = new DateItem(this);
-    dateitem30->show();
-    map->insert(QString("4-1"), dateitem30 );
-    connect(dateitem30, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem30, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem30, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem31 = new DateItem(this);
-    dateitem31->show();
-    map->insert(QString("4-2"), dateitem31 );
-    connect(dateitem31, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem31, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem31, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem32 = new DateItem(this);
-    dateitem32->show();
-    map->insert(QString("4-3"), dateitem32 );
-    connect(dateitem32, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem32, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem32, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem33 = new DateItem(this);
-    dateitem33->show();
-    map->insert(QString("4-4"), dateitem33 );
-    connect(dateitem33, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem33, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem33, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem34 = new DateItem(this);
-    dateitem34->show();
-    map->insert(QString("4-5"), dateitem34 );
-    connect(dateitem34, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem34, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem34, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem35 = new DateItem(this);
-    dateitem35->show();
-    map->insert(QString("4-6"), dateitem35 );
-    connect(dateitem35, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem35, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem35, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem36 = new DateItem(this);
-    dateitem36->show();
-    map->insert(QString("4-7"), dateitem36 );
-    connect(dateitem36, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem36, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem36, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem40 = new DateItem(this);
-    dateitem40->show();
-    map->insert(QString("5-1"), dateitem40 );
-    connect(dateitem40, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem40, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem40, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem41 = new DateItem(this);
-    dateitem41->show();
-    map->insert(QString("5-2"), dateitem41 );
-    connect(dateitem41, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem41, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem41, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem42 = new DateItem(this);
-    dateitem42->show();
-    map->insert(QString("5-3"), dateitem42 );
-    connect(dateitem42, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem42, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem42, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem43 = new DateItem(this);
-    dateitem43->show();
-    map->insert(QString("5-4"), dateitem43 );
-    connect(dateitem43, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem43, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem43, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem44 = new DateItem(this);
-    dateitem44->show();
-    map->insert(QString("5-5"), dateitem44 );
-    connect(dateitem44, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem44, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem44, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem45 = new DateItem(this);
-    dateitem45->show();
-    map->insert(QString("5-6"), dateitem45 );
-    connect(dateitem45, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem45, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem45, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem46 = new DateItem(this);
-    dateitem46->show();
-    map->insert(QString("5-7"), dateitem46 );
-    connect(dateitem46, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem46, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem46, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem50 = new DateItem(this);
-    dateitem50->hide();
-    map->insert(QString("6-1"), dateitem50 );
-    connect(dateitem50, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem50, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem50, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem51 = new DateItem(this);
-    dateitem51->hide();
-    map->insert(QString("6-2"), dateitem51 );
-    connect(dateitem51, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
-    connect(dateitem51, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
-    connect(dateitem51, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
-
-    DateItem *dateitem52 = new DateItem(this);
-    dateitem52->hide();
-    map->insert(QString("6-3"), dateitem52 );
-
-    DateItem *dateitem53 = new DateItem(this);
-    dateitem53->hide();
-    map->insert(QString("6-4"), dateitem53 );
-
-    DateItem *dateitem54 = new DateItem(this);
-    dateitem54->hide();
-    map->insert(QString("6-5"), dateitem54 );
-
-    DateItem *dateitem55 = new DateItem(this);
-    dateitem55->hide();
-    map->insert(QString("6-6"), dateitem55 );
-
-    DateItem *dateitem56 = new DateItem(this);
-    dateitem56->hide();
-    map->insert(QString("6-7"), dateitem56 );
+    for (int i = 0; i < 6; ++i) {
+        for (int j = 0; j < 7; ++j) {
+            auto id = QString("%1-%2").arg(i + 1).arg(j + 1);
+            if (i < 5) {
+                initDateItem(id, true, true);
+            } else {
+                if (j < 2) {
+                    initDateItem(id, false, true);
+                } else {
+                    initDateItem(id, false, false);
+                }
+            }
+        }
+    }
 
     setItemLayout();
     setCalendar();
@@ -636,191 +372,30 @@ void ChineseCalendar::paintEvent(QPaintEvent *) {
 
 void ChineseCalendar::setItemLayout() {
     if(isTall == false) {
-        map->value("1-1")->resizeItem(49,50);
-        map->value("1-2")->resizeItem(49,50);
-        map->value("1-3")->resizeItem(49,50);
-        map->value("1-4")->resizeItem(49,50);
-        map->value("1-5")->resizeItem(49,50);
-        map->value("1-6")->resizeItem(49,50);
-        map->value("1-7")->resizeItem(49,50);
-        map->value("2-1")->resizeItem(49,50);
-        map->value("2-2")->resizeItem(49,50);
-        map->value("2-3")->resizeItem(49,50);
-        map->value("2-4")->resizeItem(49,50);
-        map->value("2-5")->resizeItem(49,50);
-        map->value("2-6")->resizeItem(49,50);
-        map->value("2-7")->resizeItem(49,50);
-        map->value("3-1")->resizeItem(49,50);
-        map->value("3-2")->resizeItem(49,50);
-        map->value("3-3")->resizeItem(49,50);
-        map->value("3-4")->resizeItem(49,50);
-        map->value("3-5")->resizeItem(49,50);
-        map->value("3-6")->resizeItem(49,50);
-        map->value("3-7")->resizeItem(49,50);
-        map->value("4-1")->resizeItem(49,50);
-        map->value("4-2")->resizeItem(49,50);
-        map->value("4-3")->resizeItem(49,50);
-        map->value("4-4")->resizeItem(49,50);
-        map->value("4-5")->resizeItem(49,50);
-        map->value("4-6")->resizeItem(49,50);
-        map->value("4-7")->resizeItem(49,50);
-        map->value("5-1")->resizeItem(49,50);
-        map->value("5-2")->resizeItem(49,50);
-        map->value("5-3")->resizeItem(49,50);
-        map->value("5-4")->resizeItem(49,50);
-        map->value("5-5")->resizeItem(49,50);
-        map->value("5-6")->resizeItem(49,50);
-        map->value("5-7")->resizeItem(49,50);
-        map->value("6-1")->resizeItem(49,50);
-        map->value("6-2")->resizeItem(49,50);
-        map->value("6-3")->resizeItem(49,50);
-        map->value("6-4")->resizeItem(49,50);
-        map->value("6-5")->resizeItem(49,50);
-        map->value("6-6")->resizeItem(49,50);
-        map->value("6-7")->resizeItem(49,50);
+        for (auto item : qAsConst(*map)) {
+            item->resizeItem(49, 50);
+        }
         isTall = true;
     }
-    map->value("1-1")->move(0,71);
-    map->value("1-2")->move(50,71);
-    map->value("1-3")->move(100,71);
-    map->value("1-4")->move(150,71);
-    map->value("1-5")->move(200,71);
-    map->value("1-6")->move(250,71);
-    map->value("1-7")->move(300,71);
 
-    map->value("2-1")->move(0,122);
-    map->value("2-2")->move(50,122);
-    map->value("2-3")->move(100,122);
-    map->value("2-4")->move(150,122);
-    map->value("2-5")->move(200,122);
-    map->value("2-6")->move(250,122);
-    map->value("2-7")->move(300,122);
-
-    map->value("3-1")->move(0,173);
-    map->value("3-2")->move(50,173);
-    map->value("3-3")->move(100,173);
-    map->value("3-4")->move(150,173);
-    map->value("3-5")->move(200,173);
-    map->value("3-6")->move(250,173);
-    map->value("3-7")->move(300,173);
-
-    map->value("4-1")->move(0,224);
-    map->value("4-2")->move(50,224);
-    map->value("4-3")->move(100,224);
-    map->value("4-4")->move(150,224);
-    map->value("4-5")->move(200,224);
-    map->value("4-6")->move(250,224);
-    map->value("4-7")->move(300,224);
-
-    map->value("5-1")->move(0,275);
-    map->value("5-2")->move(50,275);
-    map->value("5-3")->move(100,275);
-    map->value("5-4")->move(150,275);
-    map->value("5-5")->move(200,275);
-    map->value("5-6")->move(250,275);
-    map->value("5-7")->move(300,275);
-
-    map->value("6-1")->move(0,326);
-    map->value("6-2")->move(50,326);
-    map->value("6-3")->move(100,326);
-    map->value("6-4")->move(150,326);
-    map->value("6-5")->move(200,326);
-    map->value("6-6")->move(250,326);
-    map->value("6-7")->move(300,326);
+    for (int i = 0; i < 6; ++i) {
+        for (int j = 0; j < 7; ++j) {
+            map->value(QString("%1-%2").arg(i + 1).arg(j + 1))->move(j * 50, 71 + i  * 51);
+        }
+    }
 }
 
 void ChineseCalendar::resetItemLayout() {
-    map->value("1-1")->resizeItem(49,41);
-    map->value("1-2")->resizeItem(49,41);
-    map->value("1-3")->resizeItem(49,41);
-    map->value("1-4")->resizeItem(49,41);
-    map->value("1-5")->resizeItem(49,41);
-    map->value("1-6")->resizeItem(49,41);
-    map->value("1-7")->resizeItem(49,41);
-    map->value("2-1")->resizeItem(49,41);
-    map->value("2-2")->resizeItem(49,41);
-    map->value("2-3")->resizeItem(49,41);
-    map->value("2-4")->resizeItem(49,41);
-    map->value("2-5")->resizeItem(49,41);
-    map->value("2-6")->resizeItem(49,41);
-    map->value("2-7")->resizeItem(49,41);
-    map->value("3-1")->resizeItem(49,41);
-    map->value("3-2")->resizeItem(49,41);
-    map->value("3-3")->resizeItem(49,41);
-    map->value("3-4")->resizeItem(49,41);
-    map->value("3-5")->resizeItem(49,41);
-    map->value("3-6")->resizeItem(49,41);
-    map->value("3-7")->resizeItem(49,41);
-    map->value("4-1")->resizeItem(49,41);
-    map->value("4-2")->resizeItem(49,41);
-    map->value("4-3")->resizeItem(49,41);
-    map->value("4-4")->resizeItem(49,41);
-    map->value("4-5")->resizeItem(49,41);
-    map->value("4-6")->resizeItem(49,41);
-    map->value("4-7")->resizeItem(49,41);
-    map->value("5-1")->resizeItem(49,41);
-    map->value("5-2")->resizeItem(49,41);
-    map->value("5-3")->resizeItem(49,41);
-    map->value("5-4")->resizeItem(49,41);
-    map->value("5-5")->resizeItem(49,41);
-    map->value("5-6")->resizeItem(49,41);
-    map->value("5-7")->resizeItem(49,41);
-    map->value("6-1")->resizeItem(49,41);
-    map->value("6-2")->resizeItem(49,41);
-    map->value("6-3")->resizeItem(49,41);
-    map->value("6-4")->resizeItem(49,41);
-    map->value("6-5")->resizeItem(49,41);
-    map->value("6-6")->resizeItem(49,41);
-    map->value("6-7")->resizeItem(49,41);
+    for (auto item : qAsConst(*map)) {
+        item->resizeItem(49, 41);
+    }
     isTall = false;
 
-    map->value("1-1")->move(0,71);
-    map->value("1-2")->move(50,71);
-    map->value("1-3")->move(100,71);
-    map->value("1-4")->move(150,71);
-    map->value("1-5")->move(200,71);
-    map->value("1-6")->move(250,71);
-    map->value("1-7")->move(300,71);
-
-    map->value("2-1")->move(0,113);
-    map->value("2-2")->move(50,113);
-    map->value("2-3")->move(100,113);
-    map->value("2-4")->move(150,113);
-    map->value("2-5")->move(200,113);
-    map->value("2-6")->move(250,113);
-    map->value("2-7")->move(300,113);
-
-    map->value("3-1")->move(0,155);
-    map->value("3-2")->move(50,155);
-    map->value("3-3")->move(100,155);
-    map->value("3-4")->move(150,155);
-    map->value("3-5")->move(200,155);
-    map->value("3-6")->move(250,155);
-    map->value("3-7")->move(300,155);
-
-    map->value("4-1")->move(0,197);
-    map->value("4-2")->move(50,197);
-    map->value("4-3")->move(100,197);
-    map->value("4-4")->move(150,197);
-    map->value("4-5")->move(200,197);
-    map->value("4-6")->move(250,197);
-    map->value("4-7")->move(300,197);
-
-    map->value("5-1")->move(0,239);
-    map->value("5-2")->move(50,239);
-    map->value("5-3")->move(100,239);
-    map->value("5-4")->move(150,239);
-    map->value("5-5")->move(200,239);
-    map->value("5-6")->move(250,239);
-    map->value("5-7")->move(300,239);
-
-    map->value("6-1")->move(0,281);
-    map->value("6-2")->move(50,281);
-    map->value("6-3")->move(100,281);
-    map->value("6-4")->move(150,281);
-    map->value("6-5")->move(200,281);
-    map->value("6-6")->move(250,281);
-    map->value("6-7")->move(300,281);
+    for (int i = 0; i < 6; ++i) {
+        for (int j = 0; j < 7; ++j) {
+            map->value(QString("%1-%2").arg(i + 1).arg(j + 1))->move(j * 50, 71 + i  * 42);
+        }
+    }
 }
 
 void ChineseCalendar::setTime() {
@@ -928,6 +503,17 @@ CCalendar ChineseCalendar::fixshengxiao(QDate date) {
     }
 }
 
+void ChineseCalendar::initDateItem(QString id, bool show, bool connect) {
+    auto *dateItem = new DateItem(this);
+    show ? dateItem->show() : dateItem->hide();
+    map->insert(id, dateItem);
+    if (connect) {
+        QObject::connect(dateItem, SIGNAL(clicked(QString)), this, SLOT(resetcalendardate(QString)));
+        QObject::connect(dateItem, SIGNAL(day(QString)), this, SLOT(setclickday(QString)));
+        QObject::connect(dateItem, SIGNAL(resetColor()), this, SLOT(resetDateItemColor()));
+    }
+}
+
 void ChineseCalendar::backtoday() {
     QDate today = QDate::currentDate();
     YearSelect->setCurrentIndex(today.year() - 1900);
@@ -996,100 +582,15 @@ void ChineseCalendar::setCalendar(bool flag) {
 }
 
 void ChineseCalendar::clearbackground() {
-    map->value("1-1")->clearstyle();
-    map->value("1-2")->clearstyle();
-    map->value("1-3")->clearstyle();
-    map->value("1-4")->clearstyle();
-    map->value("1-5")->clearstyle();
-    map->value("1-6")->clearstyle();
-    map->value("1-7")->clearstyle();
-    map->value("2-1")->clearstyle();
-    map->value("2-2")->clearstyle();
-    map->value("2-3")->clearstyle();
-    map->value("2-4")->clearstyle();
-    map->value("2-5")->clearstyle();
-    map->value("2-6")->clearstyle();
-    map->value("2-7")->clearstyle();
-    map->value("3-1")->clearstyle();
-    map->value("3-2")->clearstyle();
-    map->value("3-3")->clearstyle();
-    map->value("3-4")->clearstyle();
-    map->value("3-5")->clearstyle();
-    map->value("3-6")->clearstyle();
-    map->value("3-7")->clearstyle();
-    map->value("4-1")->clearstyle();
-    map->value("4-2")->clearstyle();
-    map->value("4-3")->clearstyle();
-    map->value("4-4")->clearstyle();
-    map->value("4-5")->clearstyle();
-    map->value("4-6")->clearstyle();
-    map->value("4-7")->clearstyle();
-    map->value("5-1")->clearstyle();
-    map->value("5-2")->clearstyle();
-    map->value("5-3")->clearstyle();
-    map->value("5-4")->clearstyle();
-    map->value("5-5")->clearstyle();
-    map->value("5-6")->clearstyle();
-    map->value("5-7")->clearstyle();
-    map->value("6-1")->clearstyle();
-    map->value("6-2")->clearstyle();
-    map->value("6-3")->clearstyle();
-    map->value("6-4")->clearstyle();
-    map->value("6-5")->clearstyle();
-    map->value("6-6")->clearstyle();
-    map->value("6-7")->clearstyle();
+    for (auto item : qAsConst(*map)) {
+        item->clearstyle();
+    }
 }
 
 void ChineseCalendar::cleardate() {
-    map->value("1-1")->clear();
-    map->value("1-2")->clear();
-    map->value("1-3")->clear();
-    map->value("1-4")->clear();
-    map->value("1-5")->clear();
-    map->value("1-6")->clear();
-    map->value("1-7")->clear();
-    map->value("2-1")->clear();
-    map->value("2-2")->clear();
-    map->value("2-3")->clear();
-    map->value("2-4")->clear();
-    map->value("2-5")->clear();
-    map->value("2-6")->clear();
-    map->value("2-7")->clear();
-    map->value("3-1")->clear();
-    map->value("3-2")->clear();
-    map->value("3-3")->clear();
-    map->value("3-4")->clear();
-    map->value("3-5")->clear();
-    map->value("3-6")->clear();
-    map->value("3-7")->clear();
-    map->value("4-1")->clear();
-    map->value("4-2")->clear();
-    map->value("4-3")->clear();
-    map->value("4-4")->clear();
-    map->value("4-5")->clear();
-    map->value("4-6")->clear();
-    map->value("4-7")->clear();
-    map->value("5-1")->clear();
-    map->value("5-2")->clear();
-    map->value("5-3")->clear();
-    map->value("5-4")->clear();
-    map->value("5-5")->clear();
-    map->value("5-6")->clear();
-    map->value("5-7")->clear();
-    map->value("6-1")->clear();
-    map->value("6-2")->clear();
-    map->value("6-3")->clear();
-    map->value("6-4")->clear();
-    map->value("6-5")->clear();
-    map->value("6-6")->clear();
-    map->value("6-7")->clear();
-    map->value("6-1")->hide();
-    map->value("6-2")->hide();
-    map->value("6-3")->hide();
-    map->value("6-4")->hide();
-    map->value("6-5")->hide();
-    map->value("6-6")->hide();
-    map->value("6-7")->hide();
+    for (auto item : qAsConst(*map)) {
+        item->clear();
+    }
     setItemLayout();
 }
 
