@@ -342,7 +342,7 @@ void ChineseCalendar::paintEvent(QPaintEvent *) {
 
 void ChineseCalendar::setItemLayout() {
     if(isTall == false) {
-        for (auto item : qAsConst(*map)) {
+        foreach(auto item, *map) {
             item->resizeItem(49, 50);
         }
         isTall = true;
@@ -519,13 +519,13 @@ void ChineseCalendar::setCalendar(bool flag) {
 }
 
 void ChineseCalendar::clearbackground() {
-    for (auto item : qAsConst(*map)) {
+    foreach(auto item, *map)  {
         item->clearstyle();
     }
 }
 
 void ChineseCalendar::cleardate() {
-    for (auto item : qAsConst(*map)) {
+    foreach(auto item, *map) {
         item->clear();
     }
     setItemLayout();
