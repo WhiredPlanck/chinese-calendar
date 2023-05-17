@@ -4,13 +4,7 @@ DEPENDPATH += $$PWD/
 INCLUDEPATH += $$PWD/src
 OBJECTS_DIR += build/
 
-
-#CONFIG += debug_and_release
-#CONFIG(debug, debug|release) {
-#    TARGET = chinese-calendar
-#} else {
-#    TARGET = chinese-calendar
-#}
+CONFIG += debug_and_release
 
 isEmpty(PREFIX) {
     PREFIX = /usr

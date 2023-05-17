@@ -58,13 +58,13 @@ int main(int argc, char *argv[])
     app.installTranslator(&translatorMenu);
 
 // load default skin
-#ifdef DEBUG
-    QFile file(QCoreApplication::applicationDirPath() + "/skin/blue-skin.qss");
+#ifdef QT_DEBUG
+    QFile defaultSkinFile(QCoreApplication::applicationDirPath() + "/data/skin/blue-skin.qss");
 #else
-    QFile file("/usr/share/chinese-calendar/skin/blue-skin.qss");
+    QFile defaultSkinFile(QLatin1String(PKGDATADIR) + QStringLiteral("/skin/blue-skin.qss"));
 #endif
-    file.open(QFile::ReadOnly);
-    QString stylesheet = QObject::tr(file.readAll());
+    defaultSkinFile.open(QFile::ReadOnly);
+    QString stylesheet = QObject::tr(defaultSkinFile.readAll());
     app.setStyleSheet(stylesheet);
 
     app.setQuitOnLastWindowClosed(false);

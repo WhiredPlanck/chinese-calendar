@@ -673,13 +673,14 @@ void ChineseCalendar::changeSkin(const QString &skin, bool bFlag) {
     QString strFilename("");
 
     if (bFlag) {
-#ifdef DEBUG
-        strFilename = QCoreApplication::applicationDirPath() + QString("/skin/%1-skin.qss").arg(skin);
+#ifdef QT_DEBUG
+        strFilename = QCoreApplication::applicationDirPath() + QString("/data/skin/%1-skin.qss").arg(skin);
 #else
-        strFilename = QString("/usr/share/chinese-calendar/skin/%1-skin.qss").arg(skin);
+        strFilename = QLatin1String(PKGDATADIR) + QString("/skin/%1-skin.qss").arg(skin);
 #endif
     } else {
-        strFilename =  QDir::homePath() + QString("/.local/share/chinese-calendar/skin/%1.qss").arg(skin);
+        QString userDataPath = qEnvironmentVariable("XDG_DATA_HOME", QDir::homePath() + QStringLiteral("/.local/share"));
+        strFilename =  userDataPath + QStringLiteral("/chinese-calendar/skin/%1.qss").arg(skin);
     }
 
     QFile qss(strFilename);
@@ -690,11 +691,10 @@ void ChineseCalendar::changeSkin(const QString &skin, bool bFlag) {
 }
 
 void ChineseCalendar::readSkinFiles() {
-    QString systemdirectory;
-    systemdirectory = QDir::homePath() + "/.local/share/chinese-calendar/skin/";
+    QString userDataPath = qEnvironmentVariable("XDG_DATA_HOME", QDir::homePath() + QStringLiteral("/.local/share"));
+    QDir userSkinDir(userDataPath + QStringLiteral("/chinese-calendar/skin"));
 
-    QDir dir(systemdirectory);
-    foreach(QFileInfo info, dir.entryInfoList()) {
+    foreach(QFileInfo info, userSkinDir.entryInfoList()) {
         if (info.isFile() && info.suffix() == "qss") {
             m_strFileList << info.baseName();
         }
@@ -729,19 +729,27 @@ void ChineseCalendar::setAutoStart(bool bFlag) {
      * 当该目录下没有desktop文件时开机启动,有则不开机启动
      * 因为系统安装时没有该用户目录,所以第一次是默认开机启动
      */
+    QString desktopName("chinese-calendar.desktop");
+    QString autostartPath =
+        QDir::homePath() + QStringLiteral("/.config/autostart/") + desktopName;
     if (!bFlag) {
         // 需要将desktop文件拷贝至~/.config/autostart目录下
-        QString strDesktop = "/usr/share/applications/chinese-calendar.desktop";
-        QString strCmd = "cp " + strDesktop + " ~/.local/share/chinese-calendar";
-        const char *cmd = strCmd.toUtf8().constData();
-        system(cmd);
+        QString desktopPath =
+#ifdef QT_DEBUG
+            QCoreApplication::applicationDirPath() + QStringLiteral("/data/") + desktopName;
+#else
+            QLatin1String(DATADIR) + QStringLiteral("/applications/") + desktopName;
+#endif
+        QFile desktop(desktopPath);
+        if (desktop.exists()) {
+            qDebug() << "autostart copy: " << desktop.copy(autostartPath);
+        }
     } else {
-        QString filename = QDir::homePath() + "/.local/share/chinese-calendar/chinese-calendar.desktop";
-        QFile file(filename);
+        QFile autostartFile(autostartPath);
 
         // if chinese-calendar.desktop is exist, then remove it.
-        if (file.exists()) {
-            file.remove();
+        if (autostartFile.exists()) {
+            autostartFile.remove();
         }
     }
 
@@ -749,8 +757,8 @@ void ChineseCalendar::setAutoStart(bool bFlag) {
 }
 
 bool ChineseCalendar::checkAutoStart() {
-    QFile autoStarFile(QDir::homePath() + "/.local/share/chinese-calendar/chinese-calendar.desktop");
-    return !autoStarFile.exists();
+    QFile autostartFile(QDir::homePath() + QStringLiteral("/.config/autostart/chinese-calendar.desktop"));
+    return !autostartFile.exists();
 }
 
 void ChineseCalendar::readSetting() {
