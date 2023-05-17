@@ -39,26 +39,7 @@ ChineseCalendar::ChineseCalendar(QWidget *parent)
     connect(YearSelect, SIGNAL(currentIndexChanged(int)), this, SLOT(setYear(int)));
     connect(this->backtotoday, SIGNAL(clicked()), this, SLOT(backtoday()));
 
-    QDateTime dateTime;
-    QString currentTime;
-    QString week;
-    dateTime = QDateTime::currentDateTime();
-    if(dateTime.toString("ddd") == "Mon")
-        week = "星期一";
-    if(dateTime.toString("ddd") == "Tue")
-        week = "星期二";
-    if(dateTime.toString("ddd") == "Wed")
-        week = "星期三";
-    if(dateTime.toString("ddd") == "Thu")
-        week = "星期四";
-    if(dateTime.toString("ddd") == "Fri")
-        week = "星期五";
-    if(dateTime.toString("ddd") == "Sat")
-        week = "星期六";
-    if(dateTime.toString("ddd") == "Sun")
-        week = "星期日";
-
-    currentTime = dateTime.toString("yyyy-MM-dd");
+    QString currentTime = QDateTime::currentDateTime().toString("yyyy-MM-dd");
     QDate day = QDate::currentDate();
     struct CCalendar datebase;
     mycalendat->ctcl_solar_to_lunar(day.year(),day.month(),day.day(),&datebase);
@@ -377,21 +358,6 @@ void ChineseCalendar::resetcalendardate(QString day) {
     QDate date(this->YearSelect->currentText().toInt(),this->monthCombo->currentText().toInt(),day.toInt());
     clearbackground();
     selectedDate = date;
-    QString weekday;
-    if(date.toString("ddd") == "Mon")
-        weekday = "星期一";
-    if(date.toString("ddd") == "Tue")
-        weekday = "星期二";
-    if(date.toString("ddd") == "Wed")
-        weekday = "星期三";
-    if(date.toString("ddd") == "Thu")
-        weekday = "星期四";
-    if(date.toString("ddd") == "Fri")
-        weekday = "星期五";
-    if(date.toString("ddd") == "Sat")
-        weekday = "星期六";
-    if(date.toString("ddd") == "Sun")
-        weekday = "星期日";
     QString selecttime = date.toString("yyyy-MM-dd");
     struct CCalendar d;
     mycalendat->ctcl_solar_to_lunar(date.year(),date.month(),date.day(),&d);
