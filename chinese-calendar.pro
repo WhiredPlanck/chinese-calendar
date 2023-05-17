@@ -1,5 +1,5 @@
+TARGET = chinese-calendar
 TEMPLATE = app
-TARGET +=
 DEPENDPATH += $$PWD/
 INCLUDEPATH += $$PWD/src
 OBJECTS_DIR += build/
@@ -12,21 +12,31 @@ OBJECTS_DIR += build/
 #    TARGET = chinese-calendar
 #}
 
-inst.files += src/KylinLunar.db
-inst.path = /usr/share/chinese-calendar/db
+isEmpty(PREFIX) {
+    PREFIX = /usr
+}
+
+BINDIR = $$PREFIX/bin
+DATADIR = $$PREFIX/share
+PKGDATADIR = $$DATADIR/chinese-calendar
+
+DEFINES += DATADIR=\\\"$$DATADIR\\\" PKGDATADIR=\\\"$$PKGDATADIR\\\"
+
+inst.files += data/KylinLunar.db
+inst.path = $$PKGDATADIR/db
 inst1.files += data/img/chinesecalendar-64.png
-inst1.path = /usr/share/pixmaps
+inst1.path = $$DATADIR/pixmaps
 inst2.files += data/chinese-calendar.desktop
-inst2.path = /usr/share/applications
+inst2.path = $$DATADIR/applications
 inst3.files += data/chinese-calendar-autostart.desktop
 inst3.path = /etc/xdg/autostart
 inst4.files += data/chinese-calendar-autostart
-inst4.path = /usr/bin
+inst4.path = $$BINDIR
 default_skin.files += data/skin/default/chinesecalendarBGyellow.png \
     data/skin/default/no.png \
     data/skin/default/note.png \
     data/skin/default/ok.png
-default_skin.path = /usr/share/chinese-calendar/skin/default
+default_skin.path = $$PKGDATADIR/skin/default
 blue_skin.files += data/skin/blue/yijibg.png \
     data/skin/blue/no.png \
     data/skin/blue/note.png \
@@ -40,7 +50,7 @@ blue_skin.files += data/skin/blue/yijibg.png \
         data/skin/blue/corner2.png \
         data/skin/blue/corner3.png \
         data/skin/blue/corner4.png
-blue_skin.path = /usr/share/chinese-calendar/skin/blue
+blue_skin.path = $$PKGDATADIR/skin/blue
 black_skin.files += data/skin/black/chinesecalendar.png \
     data/skin/black/no.png \
     data/skin/black/no-hover.png \
@@ -50,16 +60,17 @@ black_skin.files += data/skin/black/chinesecalendar.png \
     data/skin/black/arrow-left.png \
     data/skin/black/arrow-right.png \
     data/skin/black/arrow-down.png
-black_skin.path = /usr/share/chinese-calendar/skin/black
+black_skin.path = $$PKGDATADIR/skin/black
 qss.files += data/skin/default-skin.qss \
     data/skin/blue-skin.qss \
     data/skin/black.qss
-qss.path = /usr/share/chinese-calendar/skin
+qss.path = $$PKGDATADIR/skin
 readme.files += data/skin/README.md
-readme.path = /usr/share/chinese-calendar/skin
+readme.path = $$PKGDATADIR/skin
 
 target.source += $$TARGET
-target.path = /usr/bin
+target.path = $$BINDIR
+
 INSTALLS += inst \
     inst1 \
     inst2 \
